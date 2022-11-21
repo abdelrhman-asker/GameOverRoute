@@ -1,0 +1,51 @@
+:root {
+    --background: #272b30;
+    --white: rgba(255, 255, 255, .55);
+    --blue: #4799eb
+  }
+  
+.MainNavDiv {
+    background-color: var(--background) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    padding: 1vh 10vw;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.437);
+    
+}
+.navbar-toggler {
+    color: var(--white) !important;
+    font-size: 28px;
+}
+.MainNavDiv a {
+    text-decoration: none;
+    color: var(--white);
+    
+    
+}
+.MainNavDiv a:hover{
+    text-decoration: none;
+    color: var(--white);
+
+    
+}
+.signupButn {
+    color: var(--blue) !important;
+    padding: 8px ;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    width: 100px;
+}
+@font-face {
+    font-family: Xanh Mono;
+    src: url(../../../public/fonts/Xanh_Mono/XanhMono-Italic.ttf);
+}
+.LogoTextGameOver {
+    font-family: Xanh Mono,monospace !important;
+    color: white !important;
+}
+.LogoTextGameOver img {
+    filter: drop-shadow(1px 1px 3px #1983e6ce);
+}

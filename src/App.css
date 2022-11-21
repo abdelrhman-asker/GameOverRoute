@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+* {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+:root {
+    --background: #272b30;
+    --white: rgba(255, 255, 255, .55);
+    --blue: #4799eb;
+    --inputback: #1c1e22
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Start of SignUp */
+.SignUpMainDivEver {
+    min-height: 100vh ;
+    padding-top: 20vh;
+    background-color: var(--background);
+    width: 100vw;
+    overflow-x: hidden;
+}
+.SignUpMainDataDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    gap: 30px;
+    /* width: fit-content; */
+    padding: 0px 45px 0px 15px;
+    border: 1px solid transparent;
+    box-shadow: 0px 3px  rgba(255, 255, 255, 0.184);
+    background-color: #32383e;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.FormManDiv  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 50px 0; */
 }
+.FormManDiv h3  {
+    color: var(--white);
+    text-align: center;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* .FormManDiv div  {
+    width: 600px;
+} */
+.FormManDiv input  {
+    width: 100%;
 }
+.FirstTwoInputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    
+}
+.FormManDiv input  {
+    background-color: var(--inputback);
+    box-shadow: none;
+    border: none;
+    height: 0px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px ;
+    color: var(--white);
+}
+.FormManDiv input:focus  {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+.FormManDiv button  {
+    width: 100%;
+    color: white !important;
+    background-color: #272b30;
+    padding: 8px;
+    outline: none;
+    border: none;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.mainIMageDivSign {
+    display: block;
+}
+.FormManDiv a  {
+    
+    color: #656565;
+
+
+}
+.FormManDiv a:hover  {
+    color: #656565;
+
+
+}
+.FormManDiv h4  {
+    color: #656565;
+    font-size: 12px;
+
+
+}
+.HrClass {
+    border: 0.1px solid white;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.SignINMainDataDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto 100px;
+    gap: 30px;
+    
+    padding: 0px 45px 0px 15px;
+    border: 1px solid transparent;
+    box-shadow: 0px 3px  rgba(255, 255, 255, 0.184);
+    background-color: #32383e;
+
+}
+.LinksInSignIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.LinksInSignIn a {
+    text-decoration: none;
+    color: var(--blue);
+    
+
+}
+.LinksInSignIn a:hover {
+    color: var(--blue);
+
+}
+.FormManDivSignIn input {
+    background-color: white;
+    height: 40px !important;
+    color: var(--background) !important;
+}
+.alertMainH {
+    font-size: 12px;
+    text-align: center;
+}
+@media screen and (min-width: 1px) and (max-width: 991.5px) {
+    .mainIMageDivSign {
+        display: none;
+    }
+    .SignUpMainDataDiv {
+        padding: 50px 0px 40px 0px;
+        margin: auto   ;
+
+    }
+    .SignINMainDataDiv {
+        padding: 15px 15px 15px 15px;
+        margin: auto 10px;
+
+    }
+}
+@media screen and (min-width: 1px) and (max-width: 771px) {
+    .FirstTwoInputs {
+        flex-wrap: wrap;
+        
+    }
 }
