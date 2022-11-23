@@ -31,6 +31,8 @@ const url= "https://route-egypt-api.herokuapp.com/signup"
 const SendRegisteredDataApi = async () => {
   let {data} =await axios.post(url,user)
   console.log(data)
+  submitregisterform()
+  
    if(data.message == "success"){
     setLoading(true)
     navigate("./SignIn")
@@ -49,13 +51,13 @@ const submitregisterform = async (e) => {
   
   
     if (await validate.error)  {
-        setErrorList(validate.error.details)
+      setErrorList(validate.error.details)
       setLoading(false)
       // console.log("firstnameerr",errs.message)
     } else {
       setLoading(true)
       SendRegisteredDataApi()
-
+      setErrorList("")
   }
 }
 
@@ -97,7 +99,7 @@ return scheme.validate(user, {abortEarly:false})
        
     </div>
 <div className='d-flex gap-3 col-12 '>
-{errorList.length > 0 ?
+{ error.length > 0 ?
 <div className='col-12'>
 {
           error.length > 0 
@@ -111,8 +113,11 @@ return scheme.validate(user, {abortEarly:false})
         }
 
 
-  
-<h4 className='alert col-12 text-center alert-danger'>Please Check Your  {errorList[0] && errorList[0].context.key &&<span> " {errorList[0].context.key} " , </span> }  {errorList[1] && errorList[1].context.key &&<span>" {errorList[1].context.key} " ,  </span> }  {errorList[2] && errorList[2].context.key && <span>" {errorList[2].context.key} " , </span> } {errorList[3] && errorList[3].context.key && <span>" {errorList[3].context.key} " ,  </span> }  {errorList[4] && errorList[4].context.key &&  <span>" {errorList[4].context.key} "  </span> }  </h4> 
+  {errorList.length ? 
+    <h4 className='alert col-12 text-center alert-danger'>Please Check Your  {errorList[0] && errorList[0].context.key &&<span> " {errorList[0].context.key} " , </span> }  {errorList[1] && errorList[1].context.key &&<span>" {errorList[1].context.key} " ,  </span> }  {errorList[2] && errorList[2].context.key && <span>" {errorList[2].context.key} " , </span> } {errorList[3] && errorList[3].context.key && <span>" {errorList[3].context.key} " ,  </span> }  {errorList[4] && errorList[4].context.key &&  <span>" {errorList[4].context.key} "  </span> }  </h4> 
+: 
+""
+}
 
 </div>
  : ""}
