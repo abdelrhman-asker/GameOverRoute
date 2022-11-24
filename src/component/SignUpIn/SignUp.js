@@ -99,7 +99,7 @@ return scheme.validate(user, {abortEarly:false})
        
     </div>
 <div className='d-flex gap-3 col-12 '>
-{ error.length > 0 ?
+
 <div className='col-12'>
 {
           error.length > 0 
@@ -120,7 +120,7 @@ return scheme.validate(user, {abortEarly:false})
 }
 
 </div>
- : ""}
+ 
 
     {/* {errorList.map((errorList, index) => {
       return <div key={index} className="alert alert-danger my-2 alertMainH ">{errorList.message}</div>
