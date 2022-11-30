@@ -30,10 +30,10 @@ const url= "https://route-egypt-api.herokuapp.com/signup"
 
 const SendRegisteredDataApi = async () => {
   let {data} =await axios.post(url,user)
-  console.log(data)
+  console.log("my data is" ,data)
   submitregisterform()
   
-   if(data.message == "success"){
+   if(data.message === "success"){
     setLoading(true)
     navigate("./SignIn")
 
@@ -45,19 +45,23 @@ const SendRegisteredDataApi = async () => {
 
 }
 const submitregisterform = async (e) => {
-  e.preventDefault();
-  const validate = validateRegister()
-  console.log(validate)
   
+  const validate = validateRegister()
+  console.log("my validate is", validate)
+  // console.log("my validate is 2", user.first_name.error)
+  e.preventDefault();
+
   
     if (await validate.error)  {
       setErrorList(validate.error.details)
       setLoading(false)
+
       // console.log("firstnameerr",errs.message)
     } else {
       setLoading(true)
       SendRegisteredDataApi()
       setErrorList("")
+
   }
 }
 
@@ -76,7 +80,7 @@ return scheme.validate(user, {abortEarly:false})
       <MainNav />
       <div className='SignUpMainDataDiv container'>
       <div className='col-lg-6 mainIMageDivSign '>
-        <img height="500px"  className='col-lg-12'  src={signinimage} />
+        <img alt='PsLogo' height="500px"  className='col-lg-12'  src={signinimage} />
         </div>  
       
         
@@ -91,7 +95,7 @@ return scheme.validate(user, {abortEarly:false})
           ""
         } */}
          
-<form onSubmit={submitregisterform} className='FormManDiv'>
+<form method='post' onSubmit={submitregisterform} className='FormManDiv'>
     <div className='col-md-12 'style={{paddingTop:'20px'}}>
       <h3>
         Create My Account!
@@ -131,13 +135,13 @@ return scheme.validate(user, {abortEarly:false})
   
 <div className='d-flex gap-1  inputanderror'>
   <input value={user.first_name} onChange={getUserData} type="text" name='first_name' placeholder='First Name'  />
-  {errorList[0] &&  errorList[0].context.key == "first_name" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
+  {errorList[0] &&  errorList[0].context.key === "first_name" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
 }
 </div>
 
 <div className='d-flex gap-1  inputanderror '>
   <input value={user.last_name} onChange={getUserData} type="text" name='last_name' placeholder='Last Name'  />
-  {errorList[0] &&  errorList[0].context.key == "last_name" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
+  {errorList[0] &&  errorList[0].context.key === "last_name" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
 }
   </div>
 </div>
@@ -146,21 +150,21 @@ return scheme.validate(user, {abortEarly:false})
 <input onChange={getUserData} type="email" name='email' placeholder='Email Address'  />
 </div>
 <div>
-{errorList[0] &&  errorList[0].context.key == "email" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
+{errorList[0] &&  errorList[0].context.key === "email" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
 }
 </div>
 </div>
 <div className='d-flex gap-1 col-12  inputanderror '>
 <input onChange={getUserData} type="number" name='age' placeholder='Age'  />
 <div>
-{errorList[0] &&  errorList[0].context.key == "age" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
+{errorList[0] &&  errorList[0].context.key === "age" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
 }
 </div>
 </div>
 <div className='d-flex gap-1 col-12  inputanderror '>
 <input onChange={getUserData} type="password" name='password' placeholder='Password'  />
 <div>
-{errorList[0] &&  errorList[0].context.key == "password" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
+{errorList[0] &&  errorList[0].context.key === "password" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
 }
 </div>
 </div>

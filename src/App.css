@@ -9,7 +9,7 @@
 }
 body {
     width: 100vw;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 /* Start of SignUp */
 .SignUpMainDivEver {
@@ -193,4 +193,209 @@ body {
     .FirstTwoInputs div {
         width: 100%;
     }
+}
+
+/* End of Sign  Up and In */
+/* start of mainhome */
+.MainFirstHomeSecEver {
+    text-align: center;
+    margin-top: 9vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../public/images/Game\ Over.html);
+    background-position:  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:var(--background);
+    filter: brightness(0.7);
+
+}
+.MainFirstHomeSec {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.MainFirstHomeSec h3 {
+    font-size: 42px;
+    color: var(--white);
+
+}
+.MainFirstHomeSec h3 span {
+    color: var(--blue);
+
+}
+.MainFirstHomeSec h4 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--white);
+    opacity: 0.6;
+
+}
+.MainFirstHomeSec button {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 7px;
+    border-radius: 10px;
+
+}
+.MainHomesecSection {
+    padding: 100px 6vw  ;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    gap: 10px;
+
+}
+
+.PersonlRecMainDiv h4 {
+    color: var(--white);
+    font-size: 26px;
+}
+.MainDivINtoMap {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    color: var(--white);
+    flex-wrap: wrap;
+
+    padding: 0 0 !important;
+    /* gap: 5px; */
+}
+.MainDivMapImgAndTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 15px !important; */
+    border: 1px solid #32383e;
+    width: calc((97% / 3) );
+    min-width: 300px;
+    background-color: #32383e;
+    border-radius: 35px;
+    margin: 0 auto 30px  !important;
+
+}
+.MainDivMapImgAndTitle:hover {
+    border-radius: 35px;
+
+}
+.MainDivMapImgAndTitle div{
+    width: 100%;
+    border-radius: 35px 35px 0 0 !important;
+
+
+}
+
+.MainDivMapImgAndTitle img{
+    border-radius: 35px 35px 0 0 !important;
+    transition: 0.5s;
+}
+.ImgMainDivForZoom {
+    width: 100%;
+    overflow: hidden;
+
+}
+.ImgMainDivForZoom img:hover {
+    border-radius: 35px 35px 0 0 !important;
+
+    scale: 1.2;
+}
+@media screen and (min-width: 1px) and (max-width: 709px) {
+    .MainHomesecSection {
+        align-items: center;
+    
+    }
+}
+/* End of Home Main Section */
+
+.MainDetailsSecEver {
+    margin-top: 9vh;
+    height: fit-content;
+    min-height: 100vh;
+    padding: 0px 3vw;
+    background-color: var(--background);
+}
+.MainDetailsSecEverOnMap {
+    padding-top: 6vh;
+    justify-content: start;
+    align-items: flex-start;
+
+}
+.MainDetailsSecEverOnMap img {
+    border-radius: 30px;
+}
+.MainDetailsSecEverOnMap  span {
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: #32383e;
+
+
+}
+.DetailsLeeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.DetailsLeftBut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px !important;
+
+}
+.DetailsLeftButRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px;
+}
+.DetailsLeftButRight h4 {
+    font-size: 22px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+.DetailsLeftButRight:hover {
+    color: white !important;
+}
+.DetailssRight  {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
+}
+.DetailssRight h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+.DetailssRight h4 {
+    color: var(--white);
+    font-size: 1.25rem;
+}
+.DetailssRight h5 {
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 2rem;
 }

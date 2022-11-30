@@ -8,7 +8,6 @@ import axios from "axios"
 import BeatLoader from "react-spinners/BeatLoader";
 
 const SignIn = () => {
-  const [error, setError] = useState("")
   const [errorList, setErrorList] = useState([])
   const [loading , setLoading] = useState(false)
   const navigate = useNavigate()
@@ -29,12 +28,12 @@ const url= "https://route-egypt-api.herokuapp.com/signin"
 const SendLoginedDataApi = async () => {
   let {data} =await axios.post(url,user)
   console.log(data)
-   if(data.message == "success"){
+   if(data.message === "success"){
     setLoading(true)
     navigate("/Home")
 
    } else {
-    setError(data.message)
+    
     setLoading(false)
 
    }
@@ -67,14 +66,14 @@ return scheme.validate(user, {abortEarly:false})
       <MainNav />
       <div className='  SignINMainDataDiv '>
       <div className='col-lg-7 mainIMageDivSign '>
-        <img width="600px" height="450px"  className='col-lg-12'  src={signinimage} />
+        <img alt='PsLogo' width="600px" height="450px"  className='col-lg-12'  src={signinimage} />
         </div>  
 
       
       <div className='col-12 col-lg-5'>
 <form onSubmit={submitLoginform} className='FormManDiv FormManDivSignIn'>
     <div>
-        <img src={Logo} width="100px"/>
+        <img alt='MLogo' src={Logo} width="100px"/>
     </div>
     <div className='col-md-12'>
       <h3>
@@ -90,7 +89,7 @@ return scheme.validate(user, {abortEarly:false})
 <input onChange={getUserData} type="email"  name='email' placeholder='Email Address'  />
 </div>
 <div>
-{errorList[0] && errorList[0].context.key == "email" ? <h4 className='alert alert-danger '>{errorList[0].message} </h4> :""}
+{errorList[0] && errorList[0].context.key === "email" ? <h4 className='alert alert-danger '>{errorList[0].message} </h4> :""}
 </div>
 </div>
 
@@ -99,12 +98,12 @@ return scheme.validate(user, {abortEarly:false})
 <input onChange={getUserData} type="password"  name='password' placeholder='Password'  />
 </div>
 <div>
-{errorList[0] &&  errorList[0].context.key == "password" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
+{errorList[0] &&  errorList[0].context.key === "password" ? <h4 className='alert alert-danger'>{errorList[0].message} </h4> : ""
 }
 </div>
 </div>
 {
-  loading == true 
+  loading === true 
   ?
   <BeatLoader color="hsla(168, 100%, 87%, 1)" />
   :

@@ -6,15 +6,8 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -25,12 +18,11 @@ const MainNav = (args) => {
   return (
     <div className='MainNavDiv'>
         <Navbar className='container'  expand="lg" {...args}>
-        <NavbarBrand href="/">
+        
             <Link to="/Home" className='LogoTextGameOver'>
-            <img width="70px" src={Logo} />
+            <img alt='MLogo' width="70px" src={Logo} />
             Game Over
             </Link>
-            </NavbarBrand>
         <NavbarToggler   onClick={toggle} >
         <AiOutlineMenu />
         </NavbarToggler>

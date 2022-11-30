@@ -6,14 +6,16 @@
   
 .MainNavDiv {
     background-color: var(--background) !important;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: fit-content;
     padding: 1vh 10vw;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.437);
-    
+    z-index: 9999  !important;
+    width: 100vw;
+    /* overflow-x: hidden; */
 }
 .navbar-toggler {
     color: var(--white) !important;
@@ -37,6 +39,50 @@
     border: 2px solid var(--blue);
     border-radius: 10px;
     width: 100px;
+}
+.NavMainItemsAfterLogo a {
+    color: white !important;
+    text-align: center;
+    margin: 5px;
+}
+.NavMainItemsAfterLogo a {
+    color: white !important;
+}
+.SecondaryLinks {
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--white);
+}
+.NavMainItemsAfterLogoDrop li a:active {
+    color: white;
+}
+.NavMainItemsAfterLogoDrop li a {
+    text-align: left;
+}
+.MainNavPartsLinks{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.MainDivMapImgAndTitle {
+    text-decoration: none;
+    color: var(--white);
+}
+.MainDivMapImgAndTitle:hover{
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 10px;
+
+}
+.MainDivMapImgAndTitle span {
+    padding: 2px 5px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: white;
+    opacity: 1;
+    border-radius: 5px;
 }
 @font-face {
     font-family: Xanh Mono;
