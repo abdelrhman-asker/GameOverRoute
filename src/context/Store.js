@@ -17,7 +17,9 @@ export default function DataContextProvider (props)  {
       headers: {
         'X-RapidAPI-Key': 'fe3469bdc5mshc1376ef3df17411p1623cajsn6da2a938a410',
         'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-      }
+      },
+      
+      
     };
     useEffect(() => {
   
@@ -31,18 +33,32 @@ export default function DataContextProvider (props)  {
   }, [])
 
 
-const filtered = data.filter(data => {
-    return data == "1"
-})
 
-// console.log("onstore2", data[0].id)
-console.log("onstore2", filtered)
-
-
+  const [dataAll, setdataAll] = useState([])
+    const optionsAll = {
+      method: 'GET',
+      url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
+  headers: {
+    'X-RapidAPI-Key': 'fe3469bdc5mshc1376ef3df17411p1623cajsn6da2a938a410',
+    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+},
+      
+      
+    };
+    useEffect(() => {
+  
+    axios.request(optionsAll).then(function (response) {
+        setdataAll(response.data)
+      console.log("onstore", response)
+  
+    }).catch(function (error) {
+      console.error(error);
+    });
+  }, [])
   return (
     <div>
   
-  <dataContext.Provider value={{data}} >
+  <dataContext.Provider value={{data, dataAll }} >
 {props.children}
   </dataContext.Provider>
   </div>

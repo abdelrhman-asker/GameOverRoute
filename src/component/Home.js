@@ -76,12 +76,10 @@ Personalized Recommendations
               </div>
               </div> 
               
-   
+{              localStorage.setItem('dataas', data.id)
+}
               </Link>
-              <Routes>
-  <Route  path="/Details/:data.id" exact render={({match}) => (
-    <Details  data={data.find((data) => String(data.id) === match.params.id) }   />)} />
-  </Routes>
+            
               </>   )}
               )}
    

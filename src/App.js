@@ -6,6 +6,7 @@ import SignIn from './component/SignUpIn/SignIn'
 import Home from "./component/Home"
 import "./App.css"
 import Details from './component/Details/Details';
+import All from './component/All/All';
 import axios from 'axios';
 import DataContextProvider, { dataContext } from './context/Store';
 import { Offline, Online } from "react-detect-offline";
@@ -29,8 +30,18 @@ const App = () => {
             <Route path='/' element={<SignUp />} />
             <Route path='/SignIn' element={<SignIn />} />
             <Route path='/Home' element={<Home data={data}  />} />
+
             <Route exact path='Details/:id' 
               element={<Details /> } />
+           
+
+             
+
+
+
+
+            <Route path='/All' element={<All    />} />
+
           </Routes>
    </Online>
         </BrowserRouter>

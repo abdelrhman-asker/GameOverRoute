@@ -287,6 +287,19 @@ body {
     margin: 0 auto 30px  !important;
 
 }
+.MainDivMapImgAndTitleAll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 15px !important; */
+    border: 1px solid #32383e;
+    width: calc((97% /4) );
+    min-width: 300px;
+    background-color: #32383e;
+    border-radius: 35px;
+    margin: 0 auto 30px  !important;
+}
 .MainDivMapImgAndTitle:hover {
     border-radius: 35px;
 
@@ -303,7 +316,7 @@ body {
     transition: 0.5s;
 }
 .ImgMainDivForZoom {
-    width: 100%;
+    width: 100%; 
     overflow: hidden;
 
 }
@@ -398,4 +411,18 @@ body {
     color: var(--white);
     font-size: 1rem;
     line-height: 2rem;
+}
+.Loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.MainAllDiv {
+    padding-top: 15vh;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
