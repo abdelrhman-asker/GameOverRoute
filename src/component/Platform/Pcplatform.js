@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BounceLoader } from 'react-spinners'
 import { datapcContext, dataContext } from '../../context/Store'
 import HomeNav from '../NavFooter/HomeNav'
 
@@ -13,6 +14,8 @@ const Pcplatform = () => {
         <div >
             
         <HomeNav  />
+        { datapc.length > 0 ?
+
     <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
           {datapc.map((datapc,index, idt)=> {
           return (
@@ -39,6 +42,8 @@ const Pcplatform = () => {
                   )}
        
                   </div>
+                  : <div className='Loader'><BounceLoader color="#36d7b7" /> </div>
+                }
         </div>
       )
 }

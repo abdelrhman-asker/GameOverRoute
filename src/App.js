@@ -59,7 +59,7 @@ const App = () => {
           </Offline>
         <Online>
 
-        
+       
           <Routes>
 
             <Route path='/' element={<SignUp />} />

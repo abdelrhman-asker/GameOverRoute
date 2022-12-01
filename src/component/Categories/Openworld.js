@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BounceLoader } from 'react-spinners'
 import { dataopenworldContext, dataContext } from '../../context/Store'
 import HomeNav from '../NavFooter/HomeNav'
 
@@ -13,6 +14,8 @@ const Openworld = () => {
     <div >
         
     <HomeNav  />
+    { dataopenworld.length > 0 ?
+
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {dataopenworld.map((dataopenworld,index, idt)=> {
       return (
@@ -38,6 +41,8 @@ const Openworld = () => {
               )}
    
               </div>
+              : <div className='Loader'><BounceLoader color="#36d7b7" /> </div>
+            }
     </div>
   )
 }

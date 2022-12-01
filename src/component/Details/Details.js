@@ -61,7 +61,9 @@ useEffect(() => {
 {/* <h1 className='alert alert-danger'>
   {id}
 </h1>
-
+    { dataalpha.length > 0 ?
+: <div className='Loader'><BounceLoader color="#36d7b7" /> </div>
+            }
 
 <h1 className='alert alert-danger'>
   {dataAllas.title}

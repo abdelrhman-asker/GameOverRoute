@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BounceLoader } from 'react-spinners'
 import { dataracingContext, dataContext } from '../../context/Store'
 import HomeNav from '../NavFooter/HomeNav'
 
@@ -13,6 +14,8 @@ const Racing = () => {
     <div >
         
     <HomeNav  />
+    { dataracing.length > 0 ?
+
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {dataracing.map((dataracing,index, idt)=> {
       return (
@@ -38,6 +41,8 @@ const Racing = () => {
               )}
    
               </div>
+              : <div className='Loader'><BounceLoader color="#36d7b7" /> </div>
+            }
     </div>
   )
 }

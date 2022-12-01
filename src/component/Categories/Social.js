@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BounceLoader } from 'react-spinners'
 import { datasocialContext, dataContext } from '../../context/Store'
 import HomeNav from '../NavFooter/HomeNav'
 
@@ -13,6 +14,8 @@ const Social = () => {
     <div >
         
     <HomeNav  />
+    { datasocial.length > 0 ?
+
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {datasocial.map((datasocial,index, idt)=> {
       return (
@@ -38,6 +41,8 @@ const Social = () => {
               )}
    
               </div>
+              : <div className='Loader'><BounceLoader color="#36d7b7" /> </div>
+            }
     </div>
   )
 }
