@@ -84,6 +84,17 @@
     opacity: 1;
     border-radius: 5px;
 }
+.TogglerLinks a {
+    color: black !important;
+}
+.dropdown-item {
+    color: black;
+    
+}
+.dropdown-item:active {
+    background-color: var(--background) !important;
+
+}
 @font-face {
     font-family: Xanh Mono;
     src: url(../../../public/fonts/Xanh_Mono/XanhMono-Italic.ttf);

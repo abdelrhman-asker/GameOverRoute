@@ -8,14 +8,16 @@
     --inputback: #1c1e22
 }
 body {
+    background-color: var(--background);
+
     width: 100vw;
     overflow-x: hidden;
 }
 /* Start of SignUp */
 .SignUpMainDivEver {
     min-height: 100vh ;
-    padding-top: 20vh;
-    background-color: var(--background);
+    padding-top: 18vh;
+
     width: 100vw;
     overflow-x: hidden;
 }
@@ -200,6 +202,7 @@ body {
 .MainFirstHomeSecEver {
     text-align: center;
     margin-top: 9vh;
+    margin-bottom: 9vh;
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -349,12 +352,12 @@ body {
 .MainDetailsSecEverOnMap img {
     border-radius: 30px;
 }
-.MainDetailsSecEverOnMap  span {
+.FreeText {
     color: var(--white);
     padding: 10px 15px;
     border-radius: 15px;
     background-color: #32383e;
-
+    
 
 }
 .DetailsLeeft {

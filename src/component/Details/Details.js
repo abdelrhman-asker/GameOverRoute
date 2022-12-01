@@ -79,7 +79,7 @@ useEffect(() => {
                 <div className='DetailsLeftBut col-12'>
                   <div className='DetailsLeftButLefet '>
                 
-                <span>FREE</span>
+                <span className='FreeText'>FREE</span>
               
                   </div>
                   <a target="_blank" href={dataAllas.freetogame_profile_url} className='DetailsLeftButRight '>
@@ -119,19 +119,19 @@ useEffect(() => {
                   {titledataAll.minimum_system_requirements ? 
  <div className='text-left' key={titledataAll.id}>
                     <h4 >
-                    Graphics : {titledataAll.minimum_system_requirements.graphics}
+                   <span style={{fontSize:"larger"}}> Graphics : </span>{titledataAll.minimum_system_requirements.graphics}
                     </h4>
                     <h4 >
-                    Memory : {titledataAll.minimum_system_requirements.memory}
+                    <span style={{fontSize:"larger"}}>   Memory : </span>{titledataAll.minimum_system_requirements.memory}
                     </h4>
                     <h4 >
-                    Os : {titledataAll.minimum_system_requirements.os}
+                    <span style={{fontSize:"larger"}}>  Os : </span>{titledataAll.minimum_system_requirements.os}
                     </h4>
                     <h4 >
-                    Processor : {titledataAll.minimum_system_requirements.processor}
+                    <span style={{fontSize:"larger"}}> Processor : </span>{titledataAll.minimum_system_requirements.processor}
                     </h4>
                     <h4 >
-                    Storage : {titledataAll.minimum_system_requirements.storage}
+                    <span style={{fontSize:"larger"}}>  Storage : </span>{titledataAll.minimum_system_requirements.storage}
                     </h4>
                   </div> 
               : "" }

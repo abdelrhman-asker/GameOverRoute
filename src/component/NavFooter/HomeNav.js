@@ -49,8 +49,12 @@ const MainNav = (args) => {
                 Platforms
               </DropdownToggle>
               <DropdownMenu end>
+                <Link to="/Pcplatform">
                 <DropdownItem>pc</DropdownItem>
+                </Link>
+                <Link to="/Browserplatform">
                 <DropdownItem>browser</DropdownItem>
+                </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
             </NavItem>
@@ -60,10 +64,18 @@ const MainNav = (args) => {
                 sort-by
               </DropdownToggle>
               <DropdownMenu end>
+              <Link to="/Release">
                 <DropdownItem>Release-date</DropdownItem>
+                </Link>
+                <Link to="/Popu">
                 <DropdownItem>popularity</DropdownItem>
+</Link>
+<Link to="/Alphabetical">
                 <DropdownItem>alphabetical</DropdownItem>
+</Link>
+                <Link to="/Relevance">
                 <DropdownItem>relevance</DropdownItem>
+                </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
             </NavItem>
@@ -73,12 +85,26 @@ const MainNav = (args) => {
                 Categories
               </DropdownToggle>
               <DropdownMenu end>
+              <Link to="/Racing">
                 <DropdownItem>racing</DropdownItem>
+                </Link>
+
+                <Link to="/Sports">
                 <DropdownItem>sports</DropdownItem>
+                </Link>
+                <Link to="/Social">
                 <DropdownItem>social</DropdownItem>
+                </Link>
+                <Link to="/Shooter">
                 <DropdownItem>shooter</DropdownItem>
+                </Link>
+                <Link to="/Openworld">
                 <DropdownItem>open-world</DropdownItem>
+                </Link>
+                <Link to="/Zombie">
                 <DropdownItem>zombie</DropdownItem>
+                </Link>
+
               </DropdownMenu>
             </UncontrolledDropdown>
             </NavItem>
