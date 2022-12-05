@@ -33,9 +33,9 @@ console.log("all", dataalpha)
                 <span>FREE</span>
               </div>
               </div> 
-              
+{/*               
 {              localStorage.setItem('dataalphaas', dataalpha.id)
-}
+} */}
               </Link>
             
               </>   )}

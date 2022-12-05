@@ -31,8 +31,8 @@ console.log("all", dataAll)
               </div>
               </div> 
               
-{              localStorage.setItem('dataAllas', dataAll.id)
-}
+{/* {              localStorage.setItem('dataAllas', dataAll.id)
+} */}
               </Link>
             
               </>   )}

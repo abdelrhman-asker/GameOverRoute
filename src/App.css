@@ -438,6 +438,7 @@ body {
 .DetailssRight h4 {
     color: var(--white);
     font-size: 1.25rem;
+    width: 100%;
 }
 .DetailssRight h5 {
     color: var(--white);

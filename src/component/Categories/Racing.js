@@ -33,8 +33,8 @@ const Racing = () => {
               </div>
               </div> 
               
-{              localStorage.setItem('dataracingas', dataracing.id)
-}
+{/* {              localStorage.setItem('dataracingas', dataracing.id)
+} */}
               </Link>
             
               </>   )}

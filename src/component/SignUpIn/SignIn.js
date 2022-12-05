@@ -7,7 +7,7 @@ import Joi from 'joi';
 import axios from "axios"
 import BeatLoader from "react-spinners/BeatLoader";
 
-const SignIn = () => {
+const SignIn = ({currentUser}) => {
   const [error, setError] = useState("")
 
   const [errorList, setErrorList] = useState([])
@@ -22,7 +22,7 @@ const getUserData = (e) =>{
   const myUser = {...user}
   myUser[e.target.name] = e.target.value;
   setUser(myUser)
-  console.log(myUser)
+  // console.log(myUser)
   // console.log(e.target.value)
 }
 // const url= "https://route-egypt-api.herokuapp.com/signin"
@@ -30,12 +30,14 @@ const url= "https://sticky-note-fe.vercel.app/signin"
 
 const SendLoginedDataApi = async () => {
   let {data} =await axios.post(url,user)
-  console.log("signin",data)
+  console.log("signin",data.token)
    if(data.message === "success"){
+    localStorage.setItem('token', data.token)
+    currentUser()
     setLoading(true)
     navigate("/Home")
     setError("")
-
+  
    } else {
     setError(data.message)
 
@@ -47,7 +49,7 @@ const SendLoginedDataApi = async () => {
 const submitLoginform = (e) => {
   e.preventDefault();
   const validate = validateLogin()
-  console.log(validate)
+  // console.log(validate)
   
     if(validate.error) {
       setLoading(false)

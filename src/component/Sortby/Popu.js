@@ -32,9 +32,9 @@ console.log("all", datapop)
                 <span>FREE</span>
               </div>
               </div> 
-              
+{/*               
 {              localStorage.setItem('datapopas', datapop.id)
-}
+} */}
               </Link>
             
               </>   )}

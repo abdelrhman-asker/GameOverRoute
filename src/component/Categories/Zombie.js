@@ -33,8 +33,8 @@ const Zombie = () => {
               </div>
               </div> 
               
-{              localStorage.setItem('datazombieas', datazombie.id)
-}
+{/* {              localStorage.setItem('datazombieas', datazombie.id)
+} */}
               </Link>
             
               </>   )}

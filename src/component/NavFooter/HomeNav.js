@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const MainNav = (args) => {
+const MainNav = ({args, LogOut}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -112,7 +112,7 @@ const MainNav = (args) => {
             <div className='SecondaryLinks  ms-2 my-3 my-lg-0   '>
             
             <NavItem>
-              <Link className='signupButn text-center px-3' to="/">
+              <Link onClick={LogOut} className='signupButn text-center px-3' to="/">
                 Log  Out 
               </Link>
             </NavItem>

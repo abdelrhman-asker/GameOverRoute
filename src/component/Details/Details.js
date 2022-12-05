@@ -128,7 +128,7 @@ console.log("check",  check)
                     {dataAllas.title}
                     </h3>
                   </div>
-                  <div className='text-left'>
+                  <div className='text-left col-12'>
                     <h4 >
                     About {dataAllas.title}
                     </h4>

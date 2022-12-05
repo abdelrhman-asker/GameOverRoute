@@ -33,8 +33,8 @@ const Social = () => {
               </div>
               </div> 
               
-{              localStorage.setItem('datasocialas', datasocial.id)
-}
+{/* {              localStorage.setItem('datasocialas', datasocial.id)
+} */}
               </Link>
             
               </>   )}

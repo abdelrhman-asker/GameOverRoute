@@ -33,8 +33,8 @@ console.log("all", datarelease)
               </div>
               </div> 
               
-{              localStorage.setItem('datareleaseas', datarelease.id)
-}
+{/* {              localStorage.setItem('datareleaseas', datarelease.id)
+} */}
               </Link>
             
               </>   )}

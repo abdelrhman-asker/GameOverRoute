@@ -7,14 +7,14 @@ import { dataContext } from '../context/Store';
 import { BrowserRouter, Route, Router, Routes, Link, NavLink,  } from 'react-router-dom'
 import Details from './Details/Details';
 
-const Home = ({data}) => {
+const Home = ({data, LogOut}) => {
 
 console.log("in home",data)
 
 
   return (
     <div>
-      <HomeNav />
+      <HomeNav  LogOut={LogOut}/>
       <div className='col-12 MainFirstHomeSecEver'>
 <div className='MainFirstHomeSec col-12'>
     <div>
@@ -61,8 +61,8 @@ Personalized Recommendations
 <div className='MainDivINtoMap container-fluid  col-12 text-left mx-auto'>
       {data.slice(0,3).map((data,index, idt)=> {
       return (
-        <>
-              <Link to={`/Details/${data.id}`}  data={data}  className='MainDivMapImgAndTitle col-xl-4 mx-auto col-12 '  key={index.id} style={{position:"relative"}}>
+        
+              <Link to={`/Details/${data.id}`} key={data.id} data={data}  className='MainDivMapImgAndTitle col-xl-4 mx-auto col-12 '   style={{position:"relative"}}>
                   <div className='ImgMainDivForZoom' >
                   <img className='col-xl-12  col-12' src={data.thumbnail} />
                 </div>
@@ -76,11 +76,11 @@ Personalized Recommendations
               </div>
               </div> 
               
-{              localStorage.setItem('dataas', data.id)
-}
+{/* {              localStorage.setItem('dataas', data.id)
+} */}
               </Link>
             
-              </>   )}
+              )}
               )}
    
               </div>

@@ -32,9 +32,9 @@ const Openworld = () => {
                 <span>FREE</span>
               </div>
               </div> 
-              
+{/*               
 {              localStorage.setItem('dataopenworldas', dataopenworld.id)
-}
+} */}
               </Link>
             
               </>   )}

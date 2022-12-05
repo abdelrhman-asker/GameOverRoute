@@ -24,10 +24,25 @@ import Social from './component/Categories/Social';
 import Shooter from './component/Categories/Shooter';
 import Openworld from './component/Categories/Openworld';
 import Zombie from './component/Categories/Zombie';
-
+import jwtDecode from 'jwt-decode';
 const App = () => {
   const {data} = useContext(dataContext)
 
+
+
+const [user , setUser] =useState(null)
+  const usertoken =()=>{
+  const encoded = localStorage.getItem("token")
+    const decoded =jwtDecode(encoded)
+    console.log(decoded)
+    setUser(decoded)
+  }
+
+
+  const LogOut = () => {
+    localStorage.removeItem("token")
+    setUser(null)
+  }
   return (
     <div>
         <BrowserRouter>
@@ -40,8 +55,8 @@ const App = () => {
 
             <Route path='/' element={<SignUp />} />
             <Route path='*' element={<SignUp />} />
-            <Route path='/SignIn' element={<SignIn />} />
-            <Route path='/Home' element={<Home data={data}  />} />
+            <Route path='/SignIn' element={<SignIn currentUser={usertoken} />} />
+            <Route path='/Home' element={<Home LogOut={LogOut} data={data}  />} />
 {/* Details Page */}
             <Route exact path='Details/:id' element={<Details /> } />
            

@@ -32,9 +32,9 @@ console.log("all", datarele)
                 <span>FREE</span>
               </div>
               </div> 
-              
+{/*               
 {              localStorage.setItem('datareleas', datarele.id)
-}
+} */}
               </Link>
             
               </>   )}

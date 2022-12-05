@@ -33,8 +33,8 @@ const Shooter = () => {
               </div>
               </div> 
               
-{              localStorage.setItem('datashooteras', datashooter.id)
-}
+{/* {              localStorage.setItem('datashooteras', datashooter.id)
+} */}
               </Link>
             
               </>   )}
