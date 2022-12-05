@@ -31,7 +31,7 @@
 
 body {
     background-color: var(--background);
-
+    padding-bottom: 50px;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -263,14 +263,14 @@ body {
     opacity: 0.6;
 
 }
-.MainFirstHomeSec button {
+.MainFirstHomeSec a {
     outline: none;
     background-color: transparent;
     border: 1px solid var(--white);
     color: var(--white);
     padding: 7px;
     border-radius: 10px;
-
+    text-decoration: none;
 }
 .MainHomesecSection {
     padding: 100px 6vw  ;
@@ -364,12 +364,15 @@ body {
     min-height: 100vh;
     padding: 0px 3vw;
     background-color: var(--background);
+    width: 100vw !important;
+    overflow-x: hidden;
 }
 .MainDetailsSecEverOnMap {
     padding-top: 6vh;
     justify-content: start;
     align-items: flex-start;
-
+    display: flex !important;
+    flex-wrap: wrap;
 }
 .MainDetailsSecEverOnMap img {
     border-radius: 30px;
@@ -388,6 +391,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 35vw;
+    position: fixed;
 }
 .DetailsLeftBut {
     display: flex;
@@ -423,6 +428,8 @@ body {
     justify-content: start;
     align-items: flex-start;
     gap: 15px;
+    margin-left: 38vw !important;
+    width: 57vw !important;
 }
 .DetailssRight h3 {
     color: var(--white);
@@ -450,6 +457,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+@media screen and (min-width: 1px) and (max-width: 991px) {
+    .DetailsLeeft {
+        width: 100%;
+        position: relative !important;
+    }
+    .DetailssRight  {
+        margin-left: auto !important;
+        width: 100% !important ;
+
+    }
 }
 /* Details swipper  */
 .mySwiper {

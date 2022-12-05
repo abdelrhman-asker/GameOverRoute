@@ -4,7 +4,7 @@
   width: 100%;
   overflow-x: hidden;
   height: fit-content;
-  
+  position: relative;
 }
 
 .swiper-slide {
@@ -78,6 +78,16 @@
     border-radius: 15px;
     padding: 10px 20px;
   }
+  .Barloader {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background) !important;
+}
   @media screen and (min-width: 1px) and (max-width: 551px)  {
     .swiper-button-next::after {
       font-size: smaller ;

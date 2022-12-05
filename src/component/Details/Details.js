@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import { dataContext } from '../../context/Store';
 import MainNav from '../NavFooter/HomeNav';
 import { FiLogIn } from 'react-icons/fi';
-import { BounceLoader } from 'react-spinners';
+import { BarLoader, BounceLoader } from 'react-spinners';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -53,6 +53,19 @@ useEffect(() => {
     console.error(error);
   });
 }, [])
+
+
+const [loading , setLoading] = useState(false);
+
+    useEffect(() =>{
+        setLoading(true)
+        setTimeout(() =>{
+            setLoading(false)
+
+        } , 2000)
+
+    },[])
+
 
 // console.log("titled dataAll133", titledataAll)
 // console.log("titled dataAll1", titledataAll)
@@ -147,8 +160,10 @@ console.log("check",  check)
 }
 )} </Swiper>
 </div> */}
- {titledataAll.screenshots["0"].image   ?
+
+ {titledataAll.screenshots.length>0   ?
 <div className='col-12'>
+  
 <Swiper  slidesPerView={1}
         spaceBetween={30}
         freeMode={true}
@@ -159,26 +174,47 @@ console.log("check",  check)
         scrollbar={{ draggable: true }}
         className="mySwiper wow fadeInUp col-12" data-wow-duration="2s" data-wow-delay="0.5s"
       >    
+     
       <SwiperSlide>
            <div  className="MainSwipesDiv animate__animated animate__backInLeft" >
+            {loading? <BarLoader className='Barloader'
+color="#36d7b7"
+height={10}
+loading
+width={500} /> : null}
+          
               <img  src={titledataAll.screenshots["0"].image} alt="Not_Found" />
             </div>
         </SwiperSlide>
      
        <SwiperSlide>
            <div  className="MainSwipesDiv animate__animated animate__backInLeft" >
+           {loading? <BarLoader className='Barloader'
+color="#36d7b7"
+height={10}
+loading
+width={500} /> : null}
               <img  src={titledataAll.screenshots["1"].image} alt="Not_Found" />
             </div>
         </SwiperSlide>
       
        <SwiperSlide>
            <div  className="MainSwipesDiv animate__animated animate__backInLeft" >
+           {loading? <BarLoader className='Barloader'
+color="#36d7b7"
+height={10}
+loading
+width={500} /> : null}
               <img  src={titledataAll.screenshots["2"].image} alt="Not_Found" />
             </div>
         </SwiperSlide>
        
-       
-        </Swiper></div> : <div className='Loader'><BounceLoader color="#36d7b7" /> </div> }
+        </Swiper></div> : <div className='Loader'><BarLoader
+  color="#36d7b7"
+  height={10}
+  loading
+  width={500}
+/></div> }
    
 
    

@@ -32,31 +32,7 @@ const App = () => {
     <div>
         <BrowserRouter>
         <ScrollToTop />
-        {/* <Offline className="d-flex  ">
-          <div style={{height:"5vh",paddingTop:"20vh", fontSize:"36px", color:"Red",  }} className="mx-auto my-auto size-5 d-flex justify-content-center align-items-center  text-center ">
-          
-          You Lost Your Connection, Please Check your INTERNET
-          </div>
-          <Routes>
-
-            <Route path='/' element={<SignUp />} />
-            <Route path='/SignIn' element={<SignIn />} />
-            <Route path='/Home' element={<Home data={data}  />} />
-          
-
-            <Route exact path='Details/:id' 
-              element={<Details /> } />
-           
-
-             
-
-
-
-
-            <Route path='/All' element={<All    />} />
-
-          </Routes>
-          </Offline> */}
+       
         <Online>
 
        
@@ -71,21 +47,21 @@ const App = () => {
            
 {/* All Games page */}
             <Route path='/All' element={<All    />} />
-            {/* PlatForms */}
+{/* PlatForms */}
             <Route path='/Pcplatform' element={<Pcplatform    />} />
             <Route path='/Browserplatform' element={<Browserplatform    />} />
-            {/* Sorted Games */}
+{/* Sorted Games */}
             <Route path='/Alphabetical' element={<Alphab    />} />
             <Route path='/Popu' element={<Popu    />} />
             <Route path='/Relevance' element={<Rele    />} />
             <Route path='/Release' element={<Release    />} />
 {/* Categories Games */}
-<Route path='/Racing' element={<Racing    />} />
-<Route path='/Sports' element={<Sports    />} />
-<Route path='/Social' element={<Social    />} />
-<Route path='/Shooter' element={<Shooter    />} />
-<Route path='/Zombie' element={<Zombie    />} />
-<Route path='/Openworld' element={<Openworld    />} />
+            <Route path='/Racing' element={<Racing    />} />
+            <Route path='/Sports' element={<Sports    />} />
+            <Route path='/Social' element={<Social    />} />
+            <Route path='/Shooter' element={<Shooter    />} />
+            <Route path='/Zombie' element={<Zombie    />} />
+            <Route path='/Openworld' element={<Openworld    />} />
 
           </Routes>
    </Online>

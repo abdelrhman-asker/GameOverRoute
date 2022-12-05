@@ -32,9 +32,9 @@ console.log("in home",data)
       </h4>
     </div>
     <div>
-<button>
+<Link to="/All">
   Browse Games
-</button>
+</Link>
 
     </div>
     </div>
