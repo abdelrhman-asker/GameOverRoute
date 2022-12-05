@@ -25,6 +25,7 @@
   -webkit-align-items: center;
   align-items: center;
   background-color: transparent !important;
+  /* text-align: center; */
 }
 
 .swiper-slide img {
@@ -32,7 +33,7 @@
   width: 650px;
   height: 350px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 50px !important;
   margin: 50px 0;
 }
 .MainSwipesDiv {
