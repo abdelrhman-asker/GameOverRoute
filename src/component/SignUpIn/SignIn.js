@@ -8,6 +8,8 @@ import axios from "axios"
 import BeatLoader from "react-spinners/BeatLoader";
 
 const SignIn = () => {
+  const [error, setError] = useState("")
+
   const [errorList, setErrorList] = useState([])
   const [loading , setLoading] = useState(false)
   const navigate = useNavigate()
@@ -23,17 +25,20 @@ const getUserData = (e) =>{
   console.log(myUser)
   // console.log(e.target.value)
 }
-const url= "https://route-egypt-api.herokuapp.com/signin"
+// const url= "https://route-egypt-api.herokuapp.com/signin"
+const url= "https://sticky-note-fe.vercel.app/signin"
 
 const SendLoginedDataApi = async () => {
   let {data} =await axios.post(url,user)
-  console.log(data)
+  console.log("signin",data)
    if(data.message === "success"){
     setLoading(true)
     navigate("/Home")
+    setError("")
 
    } else {
-    
+    setError(data.message)
+
     setLoading(false)
 
    }
@@ -50,6 +55,7 @@ const submitLoginform = (e) => {
     } else {
       setLoading(true)
       SendLoginedDataApi()
+      setErrorList("")
 
   }
 }
@@ -72,6 +78,9 @@ return scheme.validate(user, {abortEarly:false})
       
       <div className='col-12 col-lg-5'>
 <form onSubmit={submitLoginform} className='FormManDiv FormManDivSignIn'>
+
+
+  
     <div>
         <img alt='MLogo' src={Logo} width="100px"/>
     </div>
@@ -80,7 +89,23 @@ return scheme.validate(user, {abortEarly:false})
         Login to GameOver
       </h3>
     </div>
-   {errorList.length > 0 ? <h4 className='alert alert-danger'>"Please Check Your Data" </h4> : ""}
+    <div className='col-12'>
+{
+          error.length > 0 
+          ?
+            <h4 className='alert alert-danger text-center '>
+              {error}
+            </h4> 
+          :
+
+          ""
+        }
+
+
+  
+
+</div>
+   {/* {errorList.length > 0 ? <h4 className='alert alert-danger'>"Please Check Your Data" </h4> : ""} */}
     {/* {errorList.map((err, index) => {
       return <div key={index} className="alert alert-danger my-2 alertMainH ">{err.message}</div>
       })}   */}

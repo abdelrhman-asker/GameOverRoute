@@ -32,7 +32,7 @@ const App = () => {
     <div>
         <BrowserRouter>
         <ScrollToTop />
-        <Offline className="d-flex  ">
+        {/* <Offline className="d-flex  ">
           <div style={{height:"5vh",paddingTop:"20vh", fontSize:"36px", color:"Red",  }} className="mx-auto my-auto size-5 d-flex justify-content-center align-items-center  text-center ">
           
           You Lost Your Connection, Please Check your INTERNET
@@ -56,7 +56,7 @@ const App = () => {
             <Route path='/All' element={<All    />} />
 
           </Routes>
-          </Offline>
+          </Offline> */}
         <Online>
 
        

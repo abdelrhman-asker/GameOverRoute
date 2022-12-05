@@ -8,7 +8,14 @@ import { dataContext } from '../../context/Store';
 import MainNav from '../NavFooter/HomeNav';
 import { FiLogIn } from 'react-icons/fi';
 import { BounceLoader } from 'react-spinners';
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import "./Swiper.css";
 const Details = () => {
   const [titledataAll, setTitledataAll] = useState([])
   
@@ -47,8 +54,10 @@ useEffect(() => {
   });
 }, [])
 
+console.log("titled dataAll133", titledataAll)
+console.log("titled dataAll1", titledataAll)
+console.log("titled dataAll2",  dataAll.id)
 
-// console.log("titled dataAll",titledataAll)
 // console.log("titled dataAll",titledataAll.minimum_system_requirements)
     return (
       <div className='MainDetailsSecEver1'>
@@ -111,8 +120,45 @@ useEffect(() => {
 <div>
 <h5>
                     {titledataAll.description}
+                  {/* <img src={titledataAll.screenshots["0"].image} />   */}
+                    
                     </h5>
 </div>
+
+
+{titledataAll.screenshots  ?
+<div className='col-9'>
+<Swiper  slidesPerView={1}
+        spaceBetween={30}
+        freeMode={true}
+        
+       
+        modules={[Navigation, Pagination, Scrollbar, A11y]} 
+        navigation={true}
+        scrollbar={{ draggable: true }}
+        className="mySwiper wow fadeInUp col-7" data-wow-duration="2s" data-wow-delay="0.5s"
+      >    
+      {console.log(titledataAll.screenshots["0"].image)}
+      <SwiperSlide>
+           <div  className="MainSwipesDiv animate__animated animate__backInLeft" >
+              <img  src={titledataAll.screenshots["0"].image} alt="Not_Found" />
+            </div>
+        </SwiperSlide>
+       <SwiperSlide>
+           <div  className="MainSwipesDiv animate__animated animate__backInLeft" >
+              <img  src={titledataAll.screenshots["1"].image} alt="Not_Found" />
+            </div>
+        </SwiperSlide>
+       <SwiperSlide>
+           <div  className="MainSwipesDiv animate__animated animate__backInLeft" >
+              <img  src={titledataAll.screenshots["2"].image} alt="Not_Found" />
+            </div>
+        </SwiperSlide>
+       
+        </Swiper></div> : null }
+     
+
+   
                   <div className='text-left'>
                     <h3 >
                     Min. System Requirements

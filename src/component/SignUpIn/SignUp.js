@@ -26,7 +26,8 @@ const getUserData = (e) =>{
   console.log(myUser)
   // console.log(e.target.value)
 }
-const url= "https://route-egypt-api.herokuapp.com/signup"
+// const url= "https://route-egypt-api.herokuapp.com/signup"
+const url= "https://sticky-note-fe.vercel.app/signup"
 
 const SendRegisteredDataApi = async () => {
   let {data} =await axios.post(url,user)
@@ -36,6 +37,7 @@ const SendRegisteredDataApi = async () => {
    if(data.message === "success"){
     setLoading(true)
     navigate("./SignIn")
+    console.log("my data is" ,data.massage)
 
    } else {
     setError(data.message)

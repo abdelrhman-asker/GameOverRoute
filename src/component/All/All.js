@@ -27,7 +27,7 @@ console.log("all", dataAll)
               </div>
               <div className='col'>
                 <span>FREE</span>
-               { console.log("my idt" ,idt)}
+               {/* { console.log("my idt" ,idt)} */}
               </div>
               </div> 
               
