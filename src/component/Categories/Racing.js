@@ -19,7 +19,7 @@ const Racing = () => {
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {dataracing.map((dataracing,index, idt)=> {
       return (
-        <>
+        
               <Link to={`/Details/${dataracing.id}`}  dataracing={dataracing}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={index.id} style={{position:"relative"}}>
                   <div className='ImgMainDivForZoom col-xl-10  col-10' >
                   <img className='col-xl-12  col-12' src={dataracing.thumbnail} />
@@ -37,7 +37,7 @@ const Racing = () => {
 } */}
               </Link>
             
-              </>   )}
+        )}
               )}
    
               </div>

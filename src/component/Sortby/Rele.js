@@ -19,7 +19,7 @@ console.log("all", datarele)
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {datarele.map((datarele,index, idt)=> {
       return (
-        <>
+       
               <Link to={`/Details/${datarele.id}`}  datarele={datarele}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={index.id} style={{position:"relative"}}>
                   <div className='ImgMainDivForZoom col-xl-10  col-10' >
                   <img className='col-xl-12  col-12' src={datarele.thumbnail} />
@@ -37,7 +37,7 @@ console.log("all", datarele)
 } */}
               </Link>
             
-              </>   )}
+                 )}
               )}
    
               </div>

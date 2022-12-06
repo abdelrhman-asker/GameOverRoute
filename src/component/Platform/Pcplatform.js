@@ -19,8 +19,8 @@ const Pcplatform = () => {
     <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
           {datapc.map((datapc,index, idt)=> {
           return (
-            <>
-                  <Link to={`/Details/${datapc.id}`}  datapc={datapc}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={index.id} style={{position:"relative"}}>
+          
+                  <Link to={`/Details/${datapc.id}`}  datapc={datapc}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={datapc.id} style={{position:"relative"}}>
                       <div className='ImgMainDivForZoom col-xl-10  col-10' >
                       <img className='col-xl-12  col-12' src={datapc.thumbnail} />
                     </div>
@@ -38,7 +38,7 @@ const Pcplatform = () => {
     }
                   </Link>
                 
-                  </>   )}
+                    )}
                   )}
        
                   </div>

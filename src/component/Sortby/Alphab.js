@@ -20,7 +20,7 @@ console.log("all", dataalpha)
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {dataalpha.map((dataalpha,index, idt)=> {
       return (
-        <>
+        
               <Link to={`/Details/${dataalpha.id}`}  dataalpha={dataalpha}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={index.id} style={{position:"relative"}}>
                   <div className='ImgMainDivForZoom col-xl-10  col-10' >
                   <img className='col-xl-12  col-12' src={dataalpha.thumbnail} />
@@ -38,7 +38,7 @@ console.log("all", dataalpha)
 } */}
               </Link>
             
-              </>   )}
+                 )}
               )}
    
               </div>

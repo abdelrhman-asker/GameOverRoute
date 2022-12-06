@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Router, Routes, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter, Route, Router, Routes, Link, NavLink, Navigate } from 'react-router-dom'
 import SignUp from './component/SignUpIn/SignUp'
 import SignIn from './component/SignUpIn/SignIn'
 import Home from "./component/Home"
@@ -43,6 +43,16 @@ const [user , setUser] =useState(null)
     localStorage.removeItem("token")
     setUser(null)
   }
+
+
+  const Protect = (props) => {
+if(localStorage.getItem('token') === null ){
+  return <Navigate to='/SignIn' />
+}else{
+  return props.children
+}
+}
+ 
   return (
     <div>
         <BrowserRouter>
@@ -54,29 +64,29 @@ const [user , setUser] =useState(null)
           <Routes>
 
             <Route path='/' element={<SignUp />} />
-            <Route path='*' element={<SignUp />} />
+            <Route path='*' element={  <SignUp />} />
             <Route path='/SignIn' element={<SignIn currentUser={usertoken} />} />
-            <Route path='/Home' element={<Home LogOut={LogOut} data={data}  />} />
+            <Route path='/Home' element={<Protect> <Home LogOut={LogOut} data={data}  />  </Protect>} />
 {/* Details Page */}
-            <Route exact path='Details/:id' element={<Details /> } />
+            <Route exact path='Details/:id' element={<Protect><Details /> </Protect>} />
            
 {/* All Games page */}
-            <Route path='/All' element={<All    />} />
+            <Route path='/All' element={<Protect><All    /></Protect>} />
 {/* PlatForms */}
-            <Route path='/Pcplatform' element={<Pcplatform    />} />
-            <Route path='/Browserplatform' element={<Browserplatform    />} />
+            <Route path='/Pcplatform' element={<Protect><Pcplatform    /></Protect>} />
+            <Route path='/Browserplatform' element={<Protect><Browserplatform    /></Protect>} />
 {/* Sorted Games */}
-            <Route path='/Alphabetical' element={<Alphab    />} />
-            <Route path='/Popu' element={<Popu    />} />
-            <Route path='/Relevance' element={<Rele    />} />
-            <Route path='/Release' element={<Release    />} />
+            <Route path='/Alphabetical' element={<Protect><Alphab    /></Protect>} />
+            <Route path='/Popu' element={<Protect><Popu    /></Protect>} />
+            <Route path='/Relevance' element={<Protect><Rele    /></Protect>} />
+            <Route path='/Release' element={<Protect><Release    /></Protect>} />
 {/* Categories Games */}
-            <Route path='/Racing' element={<Racing    />} />
-            <Route path='/Sports' element={<Sports    />} />
-            <Route path='/Social' element={<Social    />} />
-            <Route path='/Shooter' element={<Shooter    />} />
-            <Route path='/Zombie' element={<Zombie    />} />
-            <Route path='/Openworld' element={<Openworld    />} />
+            <Route path='/Racing' element={<Protect><Racing    /></Protect>} />
+            <Route path='/Sports' element={<Protect><Sports    /></Protect>} />
+            <Route path='/Social' element={<Protect><Social    /></Protect>} />
+            <Route path='/Shooter' element={<Protect><Shooter    /></Protect>} />
+            <Route path='/Zombie' element={<Protect><Zombie    /></Protect>} />
+            <Route path='/Openworld' element={<Protect><Openworld    /></Protect>} />
 
           </Routes>
    </Online>

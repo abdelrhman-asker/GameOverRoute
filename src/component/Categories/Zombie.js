@@ -19,7 +19,7 @@ const Zombie = () => {
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {datazombie.map((datazombie,index, idt)=> {
       return (
-        <>
+ 
               <Link to={`/Details/${datazombie.id}`}  datazombie={datazombie}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={index.id} style={{position:"relative"}}>
                   <div className='ImgMainDivForZoom col-xl-10  col-10' >
                   <img className='col-xl-12  col-12' src={datazombie.thumbnail} />
@@ -37,7 +37,7 @@ const Zombie = () => {
 } */}
               </Link>
             
-              </>   )}
+                )}
               )}
    
               </div>

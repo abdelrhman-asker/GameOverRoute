@@ -19,7 +19,7 @@ console.log("all", datarelease)
 <div className='MainAllDiv container-fluid  col-12 text-left mx-auto'>
       {datarelease.map((datarelease,index, idt)=> {
       return (
-        <>
+      
               <Link to={`/Details/${datarelease.id}`}  datarelease={datarelease}  className='MainDivMapImgAndTitle MainDivMapImgAndTitleAll mx-auto col-10 '  key={index.id} style={{position:"relative"}}>
                   <div className='ImgMainDivForZoom col-xl-10  col-10' >
                   <img className='col-xl-12  col-12' src={datarelease.thumbnail} />
@@ -37,7 +37,7 @@ console.log("all", datarelease)
 } */}
               </Link>
             
-              </>   )}
+                )}
               )}
    
               </div>
