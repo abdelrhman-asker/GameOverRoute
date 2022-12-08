@@ -14,8 +14,12 @@ import {
   DropdownItem,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { dataContext } from '../../context/Store';
 
-const MainNav = ({args, LogOut}) => {
+const MainNav = ({args}) => {
+  const {LogOut} = useContext(dataContext)
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);

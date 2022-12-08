@@ -459,6 +459,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
+.read-more-button {
+    color: #36d7b7;
+    font-size: larger;
+    cursor: pointer;
+}
 @media screen and (min-width: 1px) and (max-width: 991px) {
     .DetailsLeeft {
         width: 100%;

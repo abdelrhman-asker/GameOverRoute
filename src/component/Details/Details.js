@@ -9,6 +9,7 @@ import MainNav from '../NavFooter/HomeNav';
 import { FiLogIn } from 'react-icons/fi';
 import { BarLoader, BounceLoader } from 'react-spinners';
 import { Swiper, SwiperSlide } from "swiper/react";
+import ReadMoreReact from 'read-more-react';
 
 // Import Swiper styles
 import "swiper/css";
@@ -135,8 +136,12 @@ console.log("check",  check)
                   </div>
 <div>
 <h5>
-                    {titledataAll.description}
-                 
+                   
+                    <ReadMoreReact text={titledataAll.description}
+                min={250}
+                ideal={450}
+                max={5000}
+                readMoreText="Read More"/>
                   {/* <img src={titledataAll.screenshots["0"].image} />   */}
                     
                     </h5>

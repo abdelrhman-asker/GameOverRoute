@@ -367,10 +367,16 @@ const [datazombie, setdatazombie] = useState([])
     console.error(error);
   });
 }, [])
+
+const [user , setUser] =useState(null)
+const LogOut = () => {
+  localStorage.removeItem("token")
+  setUser(null)
+}
   return (
     <div>
   
-  <dataContext.Provider value={{data, dataAll,datapc, databrowser, datarelease, datapop, dataalpha, datarele, dataopenworld, datashooter, dataracing, datasocial, datasports, datazombie }} >
+  <dataContext.Provider value={{data, dataAll,datapc, databrowser, datarelease, datapop, dataalpha, datarele, dataopenworld, datashooter, dataracing, datasocial, datasports, datazombie, LogOut }} >
 {props.children}
   </dataContext.Provider>
   </div>

@@ -27,6 +27,7 @@ import Zombie from './component/Categories/Zombie';
 import jwtDecode from 'jwt-decode';
 const App = () => {
   const {data} = useContext(dataContext)
+  const {LogOut} = useContext(dataContext)
 
 
 
@@ -39,10 +40,7 @@ const [user , setUser] =useState(null)
   }
 
 
-  const LogOut = () => {
-    localStorage.removeItem("token")
-    setUser(null)
-  }
+
 
 
   const Protect = (props) => {
@@ -66,7 +64,7 @@ if(localStorage.getItem('token') === null ){
             <Route path='/' element={<SignUp />} />
             <Route path='*' element={  <SignUp />} />
             <Route path='/SignIn' element={<SignIn currentUser={usertoken} />} />
-            <Route path='/Home' element={<Protect> <Home LogOut={LogOut} data={data}  />  </Protect>} />
+            <Route path='/Home' element={<Protect> <Home  data={data}   />  </Protect>} />
 {/* Details Page */}
             <Route exact path='Details/:id' element={<Protect><Details /> </Protect>} />
            

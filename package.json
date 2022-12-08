@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.6",
     "reactstrap": "^9.1.5",
+    "read-more-react": "^1.0.10",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },

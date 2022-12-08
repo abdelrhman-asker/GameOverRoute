@@ -7,14 +7,14 @@ import { dataContext } from '../context/Store';
 import { BrowserRouter, Route, Router, Routes, Link, NavLink,  } from 'react-router-dom'
 import Details from './Details/Details';
 
-const Home = ({data, LogOut}) => {
+const Home = ({data}) => {
 
 console.log("in home",data)
 
 
   return (
     <div>
-      <HomeNav  LogOut={LogOut}/>
+      <HomeNav  />
       <div className='col-12 MainFirstHomeSecEver'>
 <div className='MainFirstHomeSec col-12'>
     <div>
