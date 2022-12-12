@@ -26,8 +26,8 @@ const dataAllas = dataAll.find((dataAllas) => dataAllas.id ==
 id);
 
 
-console.log("dataAllas" ,dataAllas)
-console.log("dataAllasid" ,dataAllas.id)
+// console.log("dataAllas" ,dataAllas)
+// console.log("dataAllasid" ,dataAllas.id)
   
 
 
@@ -36,7 +36,7 @@ console.log("dataAllasid" ,dataAllas.id)
 
 const optionss = {
   method: 'GET',
-   url : `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${dataAllas.id}}`,
+   url : `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}}`,
   headers: {
     'X-RapidAPI-Key': 'fe3469bdc5mshc1376ef3df17411p1623cajsn6da2a938a410',
     'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
@@ -49,6 +49,7 @@ useEffect(() => {
 
   axios.request(optionss).then(function (response) {
     setTitledataAll(response.data)
+    console.log("ttdata",titledataAll)
   
   }).catch(function (error) {
     console.error(error);
@@ -96,13 +97,13 @@ console.log("check",  check)
 </h1> */}
     
 {/* <Link to="/Home" >Back to Home</Link> */}
-{ dataAllas.id === titledataAll.id ?     
+{  titledataAll.id ?     
                
                <div className='col-12 d-md-flex flex-md-row flex-coloumn    container-fluid   MainDetailsSecEverOnMap' > 
                 
               <div className='DetailsLeeft col-10 col-md-4 mx-auto ms-md-0'>
                 <div className='DetailsLeftTop col-12'>
-                  <img className='col-12' src={dataAllas.thumbnail} />
+                  <img className='col-12' src={titledataAll["thumbnail"]} />
                 </div>
                 <div className='DetailsLeftBut col-12'>
                   <div className='DetailsLeftButLefet '>
@@ -110,7 +111,7 @@ console.log("check",  check)
                 <span className='FreeText'>FREE</span>
               
                   </div>
-                  <a target="_blank" href={dataAllas.freetogame_profile_url} className='DetailsLeftButRight '>
+                  <a target="_blank" href={titledataAll["game_url"]} className='DetailsLeftButRight '>
                   <h4> Play Now </h4><FiLogIn />
                   </a>
                 </div>
@@ -126,12 +127,12 @@ console.log("check",  check)
                 <div className='DetailssRight mt-5 my-md-0  col-md-8 col-10 mx-auto ms-md-4'>
                   <div className='text-left'>
                     <h3 >
-                    {dataAllas.title}
+                    {titledataAll["title"]}
                     </h3>
                   </div>
                   <div className='text-left col-12'>
                     <h4 >
-                    About {dataAllas.title}
+                    About {titledataAll["title"]}
                     </h4>
                   </div>
 <div>
