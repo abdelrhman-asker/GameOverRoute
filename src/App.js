@@ -25,6 +25,7 @@ import Shooter from './component/Categories/Shooter';
 import Openworld from './component/Categories/Openworld';
 import Zombie from './component/Categories/Zombie';
 import jwtDecode from 'jwt-decode';
+import { BarLoader, BounceLoader } from 'react-spinners';
 const App = () => {
   const {data} = useContext(dataContext)
   const {LogOut} = useContext(dataContext)
@@ -51,17 +52,28 @@ if(localStorage.getItem('token') === null ){
 }
 }
  
+// const [loading , setLoading] = useState(false);
+
+//     useEffect(() =>{
+//         setLoading(true)
+//         setTimeout(() =>{
+//             setLoading(false)
+
+//         } , 200000)
+
+//     },[])
+
   return (
     <div>
         <BrowserRouter>
         <ScrollToTop />
-       
+        {/* {loading === false ?<div style={{width:"100vw", height:"100vh", justifyContent:"center", alignItems:"center", display:"flex"}}> <BounceLoader color="#36d7b7" style={{width:"100vw", height:"100vh"}}/> </div>: null} */}
         <Online>
 
        
           <Routes>
 
-            <Route path='/' element={<SignUp />} />
+            <Route path='/' element={<SignUp   /> } />
             <Route path='*' element={  <SignUp />} />
             <Route path='/SignIn' element={<SignIn currentUser={usertoken} />} />
             <Route path='/Home' element={<Protect> <Home  data={data}   />  </Protect>} />

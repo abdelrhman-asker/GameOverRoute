@@ -434,6 +434,21 @@ body {
 .DetailssRight h3 {
     color: var(--white);
     font-size: 2.5rem;
+    border-bottom: 5px solid var(--blue);
+    position: relative;
+    padding-bottom: 5px;
+}
+.DetailssRight h3::before {
+    
+    content: "";
+    left: 0;
+    bottom: -5px;
+    background-color: var(--white);
+    width: 30%;
+    height: 5px;
+    position: absolute;
+    
+   
 }
 .DetailssRight h4 {
     color: var(--white);

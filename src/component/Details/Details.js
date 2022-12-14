@@ -10,6 +10,7 @@ import { FiLogIn } from 'react-icons/fi';
 import { BarLoader, BounceLoader } from 'react-spinners';
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReadMoreReact from 'read-more-react';
+import Typewriter from 'typewriter-effect';
 
 // Import Swiper styles
 import "swiper/css";
@@ -68,7 +69,7 @@ const [loading , setLoading] = useState(false);
 
     },[])
 
-
+    
 // console.log("titled dataAll133", titledataAll)
 // console.log("titled dataAll1", titledataAll)
 // console.log("titled dataAll2",  dataAll.id)
@@ -97,7 +98,7 @@ console.log("check",  check)
 </h1> */}
     
 {/* <Link to="/Home" >Back to Home</Link> */}
-{  titledataAll.id ?     
+{  titledataAll.id && loading === false ?     
                
                <div className='col-12 d-md-flex flex-md-row flex-coloumn    container-fluid   MainDetailsSecEverOnMap' > 
                 
@@ -127,7 +128,17 @@ console.log("check",  check)
                 <div className='DetailssRight mt-5 my-md-0  col-md-8 col-10 mx-auto ms-md-4'>
                   <div className='text-left'>
                     <h3 >
-                    {titledataAll["title"]}
+                    <Typewriter
+  options={{
+    strings:   titledataAll["title"],
+    delay:200,
+    autoStart: true,
+
+    loop: false,
+  }}
+/>
+
+  
                     </h3>
                   </div>
                   <div className='text-left col-12'>

@@ -24,9 +24,10 @@
 .MainNavDiv a {
     text-decoration: none;
     color: var(--white);
-    
-    
+    position: relative;
+   
 }
+
 .MainNavDiv a:hover{
     text-decoration: none;
     color: var(--white);
@@ -40,10 +41,12 @@
     border-radius: 10px;
     width: 100px;
 }
+
 .NavMainItemsAfterLogo a {
     color: white !important;
     text-align: center;
     margin: 5px 5px 5px 0;
+   
 }
 .NavMainItemsAfterLogo a {
     color: white !important;
