@@ -6,17 +6,35 @@ import { HashLink } from 'react-router-hash-link';
 import { dataContext } from '../context/Store';
 import { BrowserRouter, Route, Router, Routes, Link, NavLink,  } from 'react-router-dom'
 import Details from './Details/Details';
+import jwtDecode from 'jwt-decode';
 
 const Home = ({data}) => {
 
-console.log("in home",data)
+// console.log("in home",data)
+const [user , setUser] =useState(null)
+  const usertoken =()=>{
+  const encoded = localStorage.getItem("token")
+    const decoded =jwtDecode(encoded)
+    console.log("decoded",decoded)
+    setUser(decoded)
+  }
+  useEffect(() =>{
+    usertoken()
+
+},[])
 
 
   return (
     <div>
       <HomeNav  />
+    
       <div className='col-12 MainFirstHomeSecEver'>
+        
 <div className='MainFirstHomeSec col-12'>
+{/* {user ? user.first_name === "Abdo" ? <h2 style={{color:"white"}}>hello Asker </h2> :  null :  null} */}
+{user ? user.email === "Askerbkbk12@gmail.com" || user.email === "askerbkbk12@gmail.com" ? <h2 style={{color:"white"}}>hello Abdelrhman </h2> :  null :  null}
+{user ? user.email === "Cattycatto@gmail.com" || user.email === "cattycatto@gmail.com" ? <h2 style={{color:"white"}}>hello Ghada, Have a Nice Day </h2> :  null :  null}
+
     <div>
       <h3>
       Find & track the best <span> free-to-play </span> games!
@@ -72,7 +90,7 @@ Personalized Recommendations
               </div>
               <div className='col'>
                 <span>FREE</span>
-               { console.log("my idt" ,idt)}
+               {/* { console.log("my idt" ,idt)} */}
               </div>
               </div> 
               
