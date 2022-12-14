@@ -225,7 +225,8 @@ body {
     text-align: center;
     margin-top: 9vh;
     margin-bottom: 9vh;
-    height: fit-content;
+    max-height: fit-content;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
