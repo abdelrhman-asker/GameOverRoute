@@ -28,12 +28,14 @@ const MainNav = ({args}) => {
     <div className='MainNavDiv px-0 px-md-auto'>
         <Navbar className='container'  expand="lg" {...args}>
         <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-          <div className='d-flex d-xl-flex gap-1' style={{color:"#4799eb", fontSize:"18px", marginRight:"20px", cursor:"pointer", flexDirection:"row", justifyContent:"center", alignItems:"center"}} onClick={() => navigate(-1)}>
+          <div className='d-flex d-xl-flex gap-1' style={{color:"#4799eb", marginRight:"20px", cursor:"pointer", flexDirection:"row", justifyContent:"center", alignItems:"center"}} onClick={() => navigate(-1)}>
           <div className='pd-0 m-0'>
-            <h6 className='pd-0 m-0 d-none d-md-flex'>Back</h6>
+            <h5 className='pd-0 m-0 d-none d-md-flex fw-bold'>Back</h5>
             </div>
-            <div>
-            <AiOutlineRollback/>
+            <div >
+              <h1 className='fs-md-3' >
+            <AiOutlineRollback style={{strokeWidth: "50"}}/>
+            </h1>
             </div>
            
           </div>
