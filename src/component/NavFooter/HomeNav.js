@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./NavFooter.css"
 import Logo from "./images/logo.png"
 import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineRollback } from 'react-icons/ai';
 import {
   Collapse,
   Navbar,
@@ -13,20 +14,29 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { dataContext } from '../../context/Store';
 
 const MainNav = ({args}) => {
+
+  const navigate = useNavigate()
   const {LogOut} = useContext(dataContext)
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
   return (
-    <div className='MainNavDiv'>
+    <div className='MainNavDiv px-0 px-md-auto'>
         <Navbar className='container'  expand="lg" {...args}>
         <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+          <div className='d-flex d-xl-flex gap-1' style={{color:"#4799eb", fontSize:"18px", marginRight:"20px", cursor:"pointer", flexDirection:"row", justifyContent:"center", alignItems:"center"}} onClick={() => navigate(-1)}>
+          <div className='pd-0 m-0'>
+            <h6 className='pd-0 m-0 d-none d-md-flex'>Back</h6>
+            </div>
+            <div>
+            <AiOutlineRollback/>
+            </div>
+           
+          </div>
             <Link to="/Home" className='LogoTextGameOver ' style={{fontSize:"20px"}}>
             <img alt='MLogo' width="70px" src={Logo} />
             Game Over
