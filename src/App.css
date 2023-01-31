@@ -524,3 +524,18 @@ body {
     object-fit: cover;
   }
   
+  .Typewriter__cursor {
+    animation-duration: 1s !important;
+    animation-iteration-count: 20 !important;
+
+  }
+  @keyframes Typewriter-cursor {
+    from {width: 10px; } 
+    to {width: 0px;}
+  }
+
+  .css-wjh20t-MuiPagination-ul {
+    display: flex;
+    justify-content: center;
+
+}

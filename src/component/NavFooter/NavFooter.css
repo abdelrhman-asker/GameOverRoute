@@ -48,7 +48,14 @@
     margin: 5px 5px 5px 0;
    
 }
-.NavMainItemsAfterLogo a {
+.ActiveN {
+    background-color: black;
+    border-radius: 15px;
+    padding: 3px;
+    margin: 0;
+    
+}
+.ActiveN a {
     color: white !important;
 }
 .SecondaryLinks {
