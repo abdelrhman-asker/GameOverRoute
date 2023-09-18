@@ -27,8 +27,8 @@ const SignUp = () => {
     // console.log(e.target.value)
   };
   // const url= "https://route-egypt-api.herokuapp.com/signup"
-  const url = "https://sticky-note-fe.vercel.app/signup";
-
+  // const url = "https://sticky-note-fe.vercel.app/signup";
+  const url = "https://www.facebook.com/v18.0/dialog/oauth?";
   const SendRegisteredDataApi = async () => {
     let { data } = await axios.post(url, user);
     console.log("my data is", data);

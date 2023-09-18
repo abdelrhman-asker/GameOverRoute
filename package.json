@@ -20,7 +20,9 @@
     "react-router-dom": "^6.4.3",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "react-social-login-buttons": "^3.9.1",
     "react-spinners": "^0.13.6",
+    "reactjs-social-login": "^2.6.3",
     "reactstrap": "^9.1.5",
     "read-more-react": "^1.0.10",
     "swiper": "^8.4.5",
@@ -39,6 +41,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "./",
   "browserslist": {
     "production": [
       ">0.2%",
