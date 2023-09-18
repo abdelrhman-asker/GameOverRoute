@@ -157,7 +157,6 @@ const SignIn = ({ currentUser }) => {
               <button type="submit">Login</button>
             )}
             <LoginSocialFacebook
-              version="3.1"
               appId="1971685316527670"
               onResolve={(response) => {
                 console.log(response);
