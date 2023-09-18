@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import MainNav from "../NavFooter/MainNav";
 import signinimage from "./images/gaming.ebaf2ffc84f4451d.jpg";
@@ -31,12 +31,12 @@ const SignIn = ({ currentUser }) => {
     // console.log(e.target.value)
   };
   // const url = "https://route-egypt-api.herokuapp.com/signin";
-  // const url= "https://sticky-note-fe.vercel.app/signin"
-  const url = "https://www.facebook.com/v18.0/dialog/oauth?";
-
+  const url = "https://sticky-note-fe.vercel.app/signin";
+  // const url = "https://www.facebook.com/v18.0/dialog/oauth?";
+  const clientId =
+    "1074214206131-ji1iskvkk1tjpoh35igh0rdfc64e3ijg.apps.googleusercontent.com";
   const SendLoginedDataApi = async () => {
     let { data } = await axios.post(url, user);
-    console.log("signin", data.token);
     if (data.message === "success") {
       localStorage.setItem("token", data.token);
       currentUser();
@@ -76,6 +76,19 @@ const SignIn = ({ currentUser }) => {
     });
     return scheme.validate(user, { abortEarly: false });
   };
+  const data = localStorage.getItem("token");
+
+  useEffect(() => {
+    console.log("its data token", data);
+    if (data) {
+      navigate("/Home");
+    }
+  }, [1]);
+  const autoNavigate = () => {
+    if (data) {
+      navigate("/Home");
+    }
+  };
   return (
     <div className="SignUpMainDivEver">
       <MainNav />
@@ -100,6 +113,11 @@ const SignIn = ({ currentUser }) => {
             </div>
             <div className="col-md-12">
               <h3>Login to GameOver</h3>
+            </div>
+            <div className="col-md-12">
+              <h3 style={{ color: "orange" }}>
+                Sorry, Try to Login with Google
+              </h3>
             </div>
             <div className="col-12">
               {error.length > 0 ? (
@@ -156,17 +174,24 @@ const SignIn = ({ currentUser }) => {
             ) : (
               <button type="submit">Login</button>
             )}
-            <LoginSocialFacebook
-              appId="1971685316527670"
-              onResolve={(response) => {
-                console.log(response);
+            <LoginSocialGoogle
+              autoLoad={true}
+              client_id={clientId}
+              onResolve={(provider) => {
+                navigate("/home");
+                localStorage.setItem("token", provider.data.access_token);
+                localStorage.setItem("AllData", JSON.stringify(provider.data));
+                console.log("tok", provider.data.access_token);
               }}
               onReject={(error) => {
                 console.log(error);
               }}
             >
-              <FacebookLoginButton />
-            </LoginSocialFacebook>
+              <GoogleLoginButton
+                className="GoogleBut"
+                style={{ background: "black" }}
+              />
+            </LoginSocialGoogle>
 
             <hr className="HrClass" />
             <div className="LinksInSignIn ">

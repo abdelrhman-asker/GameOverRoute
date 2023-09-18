@@ -16,15 +16,6 @@ import jwtDecode from "jwt-decode";
 
 const Home = ({ data }) => {
   const [user, setUser] = useState(null);
-  const usertoken = () => {
-    const encoded = localStorage.getItem("token");
-    const decoded = jwtDecode(encoded);
-    console.log("decoded", decoded);
-    setUser(decoded);
-  };
-  useEffect(() => {
-    usertoken();
-  }, []);
 
   return (
     <div>
@@ -33,26 +24,6 @@ const Home = ({ data }) => {
       <div className="col-12 MainFirstHomeSecEver">
         <div className="MainFirstHomeSec col-12">
           {/* {user ? user.first_name === "Abdo" ? <h2 style={{color:"white"}}>hello Asker </h2> :  null :  null} */}
-          {user ? (
-            user.email === "Askerbkbk12@gmail.com" ||
-            user.email === "askerbkbk12@gmail.com" ? (
-              <div>
-                {" "}
-                <h2 style={{ color: "white" }}>hello Abdelrhman </h2>{" "}
-              </div>
-            ) : null
-          ) : null}
-          {user ? (
-            user.email === "Cattycatto@gmail.com" ||
-            user.email === "cattycatto@gmail.com" ? (
-              <div>
-                {" "}
-                <h2 style={{ color: "white" }}>
-                  hello Ghada, Have a Nice Day{" "}
-                </h2>{" "}
-              </div>
-            ) : null
-          ) : null}
 
           <div>
             <h3>

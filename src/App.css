@@ -1,541 +1,519 @@
 * {
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 :root {
-    --background: #272b30;
-    --white: rgba(255, 255, 255, .55);
-    --blue: #4799eb;
-    --inputback: #1c1e22
+  --background: #272b30;
+  --white: rgba(255, 255, 255, 0.55);
+  --blue: #4799eb;
+  --inputback: #1c1e22;
 }
 /* Scroll Bar */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: transparent; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(187, 187, 187); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(187, 187, 187); 
-  }
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 187, 187);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(187, 187, 187);
+}
 
 body {
-    background-color: var(--background);
-    padding-bottom: 50px;
-    width: 100vw;
-    overflow-x: hidden;
+  background-color: var(--background);
+  padding-bottom: 50px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.GoogleBut {
+  border-radius: 20px !important;
+}
+.GoogleBut:hover {
+  background-color: black !important;
+}
+.GoogleBut:active {
+  background-color: black !important;
+}
+.GoogleBut:default {
+  background-color: black !important;
 }
 /* Start of SignUp */
 .SignUpMainDivEver {
-    min-height: 100vh ;
-    padding-top: 18vh;
+  min-height: 100vh;
+  padding-top: 18vh;
 
-    width: 100vw;
-    overflow-x: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .SignUpMainDataDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: auto;
-    gap: 30px;
-    /* width: fit-content; */
-    padding: 0px 45px 0px 15px;
-    border: 1px solid transparent;
-    box-shadow: 0px 3px  rgba(255, 255, 255, 0.184);
-    background-color: #32383e;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  gap: 30px;
+  /* width: fit-content; */
+  padding: 0px 45px 0px 15px;
+  border: 1px solid transparent;
+  box-shadow: 0px 3px rgba(255, 255, 255, 0.184);
+  background-color: #32383e;
 }
 
-.FormManDiv  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    /* padding: 50px 0; */
+.FormManDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* padding: 50px 0; */
 }
-.FormManDiv h3  {
-    color: var(--white);
-    text-align: center;
-
+.FormManDiv h3 {
+  color: var(--white);
+  text-align: center;
 }
 /* .FormManDiv div  {
     width: 600px;
 } */
-.FormManDiv input  {
-    width: 100%;
+.FormManDiv input {
+  width: 100%;
 }
 .FirstTwoInputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
 }
-.FormManDiv input  {
-    background-color: var(--inputback);
-    box-shadow: none;
-    border: none;
-    height: 0px;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 5px ;
-    color: var(--white);
+.FormManDiv input {
+  background-color: var(--inputback);
+  box-shadow: none;
+  border: none;
+  height: 0px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  color: var(--white);
 }
-.FormManDiv input:focus  {
-    box-shadow: none;
-    border: none;
-    outline: none;
+.FormManDiv input:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
 }
-.FormManDiv button  {
-    width: 100%;
-    color: white !important;
-    background-color: #272b30;
-    padding: 8px;
-    outline: none;
-    border: none;
-
+.FormManDiv button {
+  width: 100%;
+  color: white !important;
+  background-color: #272b30;
+  padding: 8px;
+  outline: none;
+  border: none;
 }
 .mainIMageDivSign {
-    display: block;
+  display: block;
 }
-.FormManDiv a  {
-    
-    color: #656565;
-
-
+.FormManDiv a {
+  color: #656565;
 }
-.FormManDiv a:hover  {
-    color: #656565;
-
-
+.FormManDiv a:hover {
+  color: #656565;
 }
-.FormManDiv h4  {
-    color: #656565;
-    font-size: 12px;
-
-
+.FormManDiv h4 {
+  color: #656565;
+  font-size: 12px;
 }
 .HrClass {
-    border: 0.1px solid white;
-    width: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
+  border: 0.1px solid white;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .SignINMainDataDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: auto 100px;
-    gap: 30px;
-    
-    padding: 0px 45px 0px 15px;
-    border: 1px solid transparent;
-    box-shadow: 0px 3px  rgba(255, 255, 255, 0.184);
-    background-color: #32383e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto 100px;
+  gap: 30px;
 
+  padding: 0px 45px 0px 15px;
+  border: 1px solid transparent;
+  box-shadow: 0px 3px rgba(255, 255, 255, 0.184);
+  background-color: #32383e;
 }
 .LinksInSignIn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 .LinksInSignIn a {
-    text-decoration: none;
-    color: var(--blue);
-    
-
+  text-decoration: none;
+  color: var(--blue);
 }
 .LinksInSignIn a:hover {
-    color: var(--blue);
-
+  color: var(--blue);
 }
 .FormManDivSignIn input {
-    background-color: white;
-    height: 40px !important;
-    color: var(--background) !important;
+  background-color: white;
+  height: 40px !important;
+  color: var(--background) !important;
 }
 .FirstTwoInputs div {
-    flex-direction: column;
-    width: 50%;
+  flex-direction: column;
+  width: 50%;
 }
 .inputanderror {
-    display: flex !important;
-    flex-direction: column !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 .alertMainH {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
 }
 .inputanderror h4 {
-    padding: 5px;
-    opacity: 0.7;
+  padding: 5px;
+  opacity: 0.7;
 }
 @media screen and (min-width: 1px) and (max-width: 991.5px) {
-    .mainIMageDivSign {
-        display: none;
-    }
-    .SignUpMainDataDiv {
-        padding: 50px 0px 40px 0px;
-        margin: auto   ;
-
-    }
-    .SignINMainDataDiv {
-        padding: 15px 15px 15px 15px;
-        margin: auto 10px;
-
-    }
+  .mainIMageDivSign {
+    display: none;
+  }
+  .SignUpMainDataDiv {
+    padding: 50px 0px 40px 0px;
+    margin: auto;
+  }
+  .SignINMainDataDiv {
+    padding: 15px 15px 15px 15px;
+    margin: auto 10px;
+  }
 }
 
 @media screen and (min-width: 1px) and (max-width: 771px) {
-    .FirstTwoInputs {
-        flex-wrap: wrap;
-        
-    }
-    .FirstTwoInputs div {
-        width: 100%;
-    }
+  .FirstTwoInputs {
+    flex-wrap: wrap;
+  }
+  .FirstTwoInputs div {
+    width: 100%;
+  }
 }
 
 /* End of Sign  Up and In */
 /* start of mainhome */
 .MainFirstHomeSecEver {
-    text-align: center;
-    margin-top: 9vh;
-    margin-bottom: 9vh;
-    max-height: fit-content;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url(../public/images/Game\ Over.html);
-    background-position:  center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color:var(--background);
-    filter: brightness(0.7);
-
+  text-align: center;
+  margin-top: 9vh;
+  margin-bottom: 9vh;
+  max-height: fit-content;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../public/images/Game\ Over.html);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--background);
+  filter: brightness(0.7);
 }
 .MainFirstHomeSec {
-    height: 45vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .MainFirstHomeSec h3 {
-    font-size: 42px;
-    color: var(--white);
-
+  font-size: 42px;
+  color: var(--white);
 }
 .MainFirstHomeSec h3 span {
-    color: var(--blue);
-
+  color: var(--blue);
 }
 .MainFirstHomeSec h4 {
-    font-size: 18px;
-    font-weight: lighter;
-    color: var(--white);
-    opacity: 0.6;
-
+  font-size: 18px;
+  font-weight: lighter;
+  color: var(--white);
+  opacity: 0.6;
 }
 .MainFirstHomeSec a {
-    outline: none;
-    background-color: transparent;
-    border: 1px solid var(--white);
-    color: var(--white);
-    padding: 7px;
-    border-radius: 10px;
-    text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding: 7px;
+  border-radius: 10px;
+  text-decoration: none;
 }
 .MainHomesecSection {
-    padding: 100px 6vw  ;
-    background-color: var(--background);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    
-    gap: 10px;
+  padding: 100px 6vw;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 
+  gap: 10px;
 }
 
 .PersonlRecMainDiv h4 {
-    color: var(--white);
-    font-size: 26px;
+  color: var(--white);
+  font-size: 26px;
 }
 .MainDivINtoMap {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: row !important;
-    color: var(--white);
-    flex-wrap: wrap;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+  color: var(--white);
+  flex-wrap: wrap;
 
-    padding: 0 0 !important;
-    /* gap: 5px; */
+  padding: 0 0 !important;
+  /* gap: 5px; */
 }
 .MainDivMapImgAndTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* gap: 15px !important; */
-    border: 1px solid #32383e;
-    width: calc((97% / 3) );
-    min-width: 300px;
-    background-color: #32383e;
-    border-radius: 35px;
-    margin: 0 auto 30px  !important;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px !important; */
+  border: 1px solid #32383e;
+  width: calc((97% / 3));
+  min-width: 300px;
+  background-color: #32383e;
+  border-radius: 35px;
+  margin: 0 auto 30px !important;
 }
 .MainDivMapImgAndTitleAll {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* gap: 15px !important; */
-    border: 1px solid #32383e;
-    width: calc((97% /4) );
-    min-width: 300px;
-    background-color: #32383e;
-    border-radius: 35px;
-    margin: 0 auto 30px  !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px !important; */
+  border: 1px solid #32383e;
+  width: calc((97% / 4));
+  min-width: 300px;
+  background-color: #32383e;
+  border-radius: 35px;
+  margin: 0 auto 30px !important;
 }
 .MainDivMapImgAndTitle:hover {
-    border-radius: 35px;
-
+  border-radius: 35px;
 }
-.MainDivMapImgAndTitle div{
-    width: 100%;
-    border-radius: 35px 35px 0 0 !important;
-
-
+.MainDivMapImgAndTitle div {
+  width: 100%;
+  border-radius: 35px 35px 0 0 !important;
 }
 
-.MainDivMapImgAndTitle img{
-    border-radius: 35px 35px 0 0 !important;
-    transition: 0.5s;
+.MainDivMapImgAndTitle img {
+  border-radius: 35px 35px 0 0 !important;
+  transition: 0.5s;
 }
 .ImgMainDivForZoom {
-    width: 100%; 
-    overflow: hidden;
-
+  width: 100%;
+  overflow: hidden;
 }
 .ImgMainDivForZoom img:hover {
-    border-radius: 35px 35px 0 0 !important;
+  border-radius: 35px 35px 0 0 !important;
 
-    scale: 1.2;
+  scale: 1.2;
 }
 @media screen and (min-width: 1px) and (max-width: 709px) {
-    .MainHomesecSection {
-        align-items: center;
-    
-    }
+  .MainHomesecSection {
+    align-items: center;
+  }
 }
 /* End of Home Main Section */
 
 .MainDetailsSecEver {
-    margin-top: 9vh;
-    height: fit-content;
-    min-height: 100vh;
-    padding: 0px 3vw;
-    background-color: var(--background);
-    width: 100vw !important;
-    overflow-x: hidden;
+  margin-top: 9vh;
+  height: fit-content;
+  min-height: 100vh;
+  padding: 0px 3vw;
+  background-color: var(--background);
+  width: 100vw !important;
+  overflow-x: hidden;
 }
 .MainDetailsSecEverOnMap {
-    padding-top: 6vh;
-    justify-content: start;
-    align-items: flex-start;
-    display: flex !important;
-    flex-wrap: wrap;
+  padding-top: 6vh;
+  justify-content: start;
+  align-items: flex-start;
+  display: flex !important;
+  flex-wrap: wrap;
 }
 .MainDetailsSecEverOnMap img {
-    border-radius: 30px;
+  border-radius: 30px;
 }
 .FreeText {
-    color: var(--white);
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #32383e;
-    
-
+  color: var(--white);
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #32383e;
 }
 .DetailsLeeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 35vw;
-    position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 35vw;
+  position: fixed;
 }
 .DetailsLeftBut {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 20px !important;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px !important;
 }
 .DetailsLeftButRight {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    background-color: var(--blue);
-    border-radius: 20px;
-    font-size: 18px;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  background-color: var(--blue);
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 10px;
 }
 .DetailsLeftButRight h4 {
-    font-size: 22px !important;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
+  font-size: 22px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 .DetailsLeftButRight:hover {
-    color: white !important;
+  color: white !important;
 }
-.DetailssRight  {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    gap: 15px;
-    margin-left: 38vw !important;
-    width: 57vw !important;
+.DetailssRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: 38vw !important;
+  width: 57vw !important;
 }
 .DetailssRight h3 {
-    color: var(--white);
-    font-size: 2.5rem;
-    border-bottom: 5px solid var(--blue);
-    position: relative;
-    padding-bottom: 5px;
+  color: var(--white);
+  font-size: 2.5rem;
+  border-bottom: 5px solid var(--blue);
+  position: relative;
+  padding-bottom: 5px;
 }
 .DetailssRight h3::before {
-    
-    content: "";
-    left: 0;
-    bottom: -5px;
-    background-color: var(--white);
-    width: 30%;
-    height: 5px;
-    position: absolute;
-    
-   
+  content: "";
+  left: 0;
+  bottom: -5px;
+  background-color: var(--white);
+  width: 30%;
+  height: 5px;
+  position: absolute;
 }
 .DetailssRight h4 {
-    color: var(--white);
-    font-size: 1.25rem;
-    width: 100%;
+  color: var(--white);
+  font-size: 1.25rem;
+  width: 100%;
 }
 .DetailssRight h5 {
-    color: var(--white);
-    font-size: 1rem;
-    line-height: 2rem;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 2rem;
 }
 .Loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .MainAllDiv {
-    padding-top: 15vh;
-    background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  padding-top: 15vh;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .read-more-button {
-    color: #36d7b7;
-    font-size: larger;
-    cursor: pointer;
+  color: #36d7b7;
+  font-size: larger;
+  cursor: pointer;
 }
 @media screen and (min-width: 1px) and (max-width: 991px) {
-    .DetailsLeeft {
-        width: 100%;
-        position: relative !important;
-    }
-    .DetailssRight  {
-        margin-left: auto !important;
-        width: 100% !important ;
-
-    }
+  .DetailsLeeft {
+    width: 100%;
+    position: relative !important;
+  }
+  .DetailssRight {
+    margin-left: auto !important;
+    width: 100% !important ;
+  }
 }
 /* Details swipper  */
 .mySwiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .Typewriter__cursor {
-    animation-duration: 1s !important;
-    animation-iteration-count: 20 !important;
+  width: 100%;
+  height: 100%;
+}
 
-  }
-  @keyframes Typewriter-cursor {
-    from {width: 10px; } 
-    to {width: 0px;}
-  }
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-  .css-wjh20t-MuiPagination-ul {
-    display: flex;
-    justify-content: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Typewriter__cursor {
+  animation-duration: 1s !important;
+  animation-iteration-count: 20 !important;
+}
+@keyframes Typewriter-cursor {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+.css-wjh20t-MuiPagination-ul {
+  display: flex;
+  justify-content: center;
 }
