@@ -6,11 +6,8 @@ import Logo from "../NavFooter/images/logo.png";
 import Joi from "joi";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
-import { LoginSocialFacebook, LoginSocialGoogle } from "reactjs-social-login";
-import {
-  FacebookLoginButton,
-  GoogleLoginButton,
-} from "react-social-login-buttons";
+import { LoginSocialGoogle } from "reactjs-social-login";
+import { GoogleLoginButton } from "react-social-login-buttons";
 
 const SignIn = ({ currentUser }) => {
   const [error, setError] = useState("");
@@ -32,7 +29,6 @@ const SignIn = ({ currentUser }) => {
   };
   // const url = "https://route-egypt-api.herokuapp.com/signin";
   const url = "https://sticky-note-fe.vercel.app/signin";
-  // const url = "https://www.facebook.com/v18.0/dialog/oauth?";
   const clientId =
     "1074214206131-ji1iskvkk1tjpoh35igh0rdfc64e3ijg.apps.googleusercontent.com";
   const SendLoginedDataApi = async () => {
@@ -83,12 +79,7 @@ const SignIn = ({ currentUser }) => {
     if (data) {
       navigate("/Home");
     }
-  }, [1]);
-  const autoNavigate = () => {
-    if (data) {
-      navigate("/Home");
-    }
-  };
+  });
   return (
     <div className="SignUpMainDivEver">
       <MainNav />

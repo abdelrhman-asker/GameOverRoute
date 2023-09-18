@@ -5,8 +5,21 @@ import signinimage from "./images/gaming.ebaf2ffc84f4451d.jpg";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
 import Joi from "joi";
+import { LoginSocialGoogle } from "reactjs-social-login";
+import { GoogleLoginButton } from "react-social-login-buttons";
+import { useEffect } from "react";
 
 const SignUp = () => {
+  const clientId =
+    "1074214206131-ji1iskvkk1tjpoh35igh0rdfc64e3ijg.apps.googleusercontent.com";
+  const data = localStorage.getItem("token");
+
+  useEffect(() => {
+    console.log("its data token", data);
+    if (data) {
+      navigate("/Home");
+    }
+  });
   const [error, setError] = useState("");
   const [errorList, setErrorList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -247,6 +260,24 @@ const SignUp = () => {
             ) : (
               <button type="submit">Create Account</button>
             )}
+            <LoginSocialGoogle
+              autoLoad={true}
+              client_id={clientId}
+              onResolve={(provider) => {
+                navigate("/home");
+                localStorage.setItem("token", provider.data.access_token);
+                localStorage.setItem("AllData", JSON.stringify(provider.data));
+                console.log("tok", provider.data.access_token);
+              }}
+              onReject={(error) => {
+                console.log(error);
+              }}
+            >
+              <GoogleLoginButton
+                className="GoogleBut"
+                style={{ background: "black" }}
+              />
+            </LoginSocialGoogle>
             <h4>
               This site is protected by reCAPTCHA and the Google{" "}
               <a target="_blank" href="https://policies.google.com/privacy">
