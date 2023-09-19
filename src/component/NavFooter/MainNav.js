@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./NavFooter.css";
-// import Logo from "../images/logo.png";
+import Logo from "../images/logo.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const MainNav = (args, { Logo }) => {
+const MainNav = (args) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);

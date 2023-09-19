@@ -1,17 +1,15 @@
 import axios from "axios";
 import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
-import HomeNav from "../NavFooter/HomeNav";
 import { FaRobot } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { dataContext } from "../../context/Store";
-import MainNav from "../NavFooter/HomeNav";
+import HomeNav from "../NavFooter/HomeNav";
 import { FiLogIn } from "react-icons/fi";
 import { BarLoader, BounceLoader } from "react-spinners";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReadMoreReact from "read-more-react";
 import Typewriter from "typewriter-effect";
-import Logo from "../images/logo.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -63,7 +61,7 @@ const Details = () => {
   // console.log("titled dataAll",titledataAll.minimum_system_requirements)
   return (
     <div className="MainDetailsSecEver1">
-      <MainNav Logo={Logo} />
+      <HomeNav />
       <div className="MainDetailsSecEver">
         <div>
           {/* <h1 className='alert alert-danger'>
