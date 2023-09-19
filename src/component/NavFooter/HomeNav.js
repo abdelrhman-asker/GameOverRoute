@@ -61,7 +61,11 @@ const MainNav = ({ args }) => {
             className="LogoTextGameOver "
             style={{ fontSize: "20px" }}
           >
-            <img alt="MLogo" width="70px" src={Logo} />
+            <img
+              alt="MLogo"
+              width="70px"
+              src="https://raw.githubusercontent.com/abdelrhman-asker/GameOverRoute/main/src/component/NavFooter/images/logo.png"
+            />
             Game Over
           </Link>
         </div>
