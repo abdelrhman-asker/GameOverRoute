@@ -46,7 +46,6 @@ const App = () => {
     console.log(decoded);
     setUser(decoded);
   };
-
   const Protect = (props) => {
     if (localStorage.getItem("token") === null) {
       return <Navigate to="/SignIn" />;
@@ -97,7 +96,6 @@ const App = () => {
                 </Protect>
               }
             />
-
             {/* All Games page */}
             <Route
               path="/All"

@@ -16,7 +16,6 @@ import jwtDecode from "jwt-decode";
 
 const Home = ({ data }) => {
   const [user, setUser] = useState(null);
-
   return (
     <div>
       <HomeNav />
@@ -62,7 +61,11 @@ const Home = ({ data }) => {
                 style={{ position: "relative" }}
               >
                 <div className="ImgMainDivForZoom">
-                  <img className="col-xl-12  col-12" src={data.thumbnail} />
+                  <img
+                    className="col-xl-12  col-12"
+                    src={data.thumbnail}
+                    alt="thumbnail"
+                  />
                 </div>
                 <div className="py-3 col-10 d-flex justify-content-center align-items-center">
                   <div className="col">{data.title}</div>
