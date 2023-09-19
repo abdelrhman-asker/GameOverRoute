@@ -67,7 +67,7 @@ const App = () => {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         {/* {loading === false ?<div style={{width:"100vw", height:"100vh", justifyContent:"center", alignItems:"center", display:"flex"}}> <BounceLoader color="#36d7b7" style={{width:"100vw", height:"100vh"}}/> </div>: null} */}
 
@@ -206,7 +206,7 @@ const App = () => {
             />
           </Routes>
         </Online>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

@@ -150,88 +150,85 @@ const Details = () => {
 )} </Swiper>
 </div> */}
 
-                {/*
- {titledataAll.screenshots.length > 0 ? (
+                {titledataAll.screenshots.length > 0 ? (
+                  <div className="col-12">
+                    <Swiper
+                      slidesPerView={1}
+                      spaceBetween={30}
+                      freeMode={true}
+                      modules={[Navigation, Pagination, Scrollbar, A11y]}
+                      navigation={true}
+                      scrollbar={{ draggable: true }}
+                      className="mySwiper wow fadeInUp col-12"
+                      data-wow-duration="2s"
+                      data-wow-delay="0.5s"
+                    >
+                      <SwiperSlide>
+                        <div className="MainSwipesDiv animate__animated animate__backInLeft">
+                          {loading ? (
+                            <BarLoader
+                              className="Barloader"
+                              color="#36d7b7"
+                              height={10}
+                              loading
+                              width={500}
+                            />
+                          ) : null}
 
-  <div className="col-12">
-    <Swiper
-      slidesPerView={1}
-      spaceBetween={30}
-      freeMode={true}
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      navigation={true}
-      scrollbar={{ draggable: true }}
-      className="mySwiper wow fadeInUp col-12"
-      data-wow-duration="2s"
-      data-wow-delay="0.5s"
-    >
-      <SwiperSlide>
-        <div className="MainSwipesDiv animate__animated animate__backInLeft">
-          {loading ? (
-            <BarLoader
-              className="Barloader"
-              color="#36d7b7"
-              height={10}
-              loading
-              width={500}
-            />
-          ) : null}
+                          <img
+                            src={titledataAll.screenshots["0"].image}
+                            alt="Not_Found"
+                          />
+                        </div>
+                      </SwiperSlide>
 
-          <img
-            src={titledataAll.screenshots["0"].image}
-            alt="Not_Found"
-          />
-        </div>
-      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="MainSwipesDiv animate__animated animate__backInLeft">
+                          {loading ? (
+                            <BarLoader
+                              className="Barloader"
+                              color="#36d7b7"
+                              height={10}
+                              loading
+                              width={500}
+                            />
+                          ) : null}
+                          <img
+                            src={titledataAll.screenshots["1"].image}
+                            alt="Not_Found"
+                          />
+                        </div>
+                      </SwiperSlide>
 
-      <SwiperSlide>
-        <div className="MainSwipesDiv animate__animated animate__backInLeft">
-          {loading ? (
-            <BarLoader
-              className="Barloader"
-              color="#36d7b7"
-              height={10}
-              loading
-              width={500}
-            />
-          ) : null}
-          <img
-            src={titledataAll.screenshots["1"].image}
-            alt="Not_Found"
-          />
-        </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <div className="MainSwipesDiv animate__animated animate__backInLeft">
-          {loading ? (
-            <BarLoader
-              className="Barloader"
-              color="#36d7b7"
-              height={10}
-              loading
-              width={500}
-            />
-          ) : null}
-          <img
-            src={titledataAll.screenshots["2"].image}
-            alt="Not_Found"
-          />
-        </div>
-      </SwiperSlide>
-    </Swiper>
-  </div>
-) : (
-  <div className="Loader">
-    <BarLoader
-      color="#36d7b7"
-      height={10}
-      loading
-      width={500}
-    />
-  </div>
-)}
- */}
+                      <SwiperSlide>
+                        <div className="MainSwipesDiv animate__animated animate__backInLeft">
+                          {loading ? (
+                            <BarLoader
+                              className="Barloader"
+                              color="#36d7b7"
+                              height={10}
+                              loading
+                              width={500}
+                            />
+                          ) : null}
+                          <img
+                            src={titledataAll.screenshots["2"].image}
+                            alt="Not_Found"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
+                ) : (
+                  <div className="Loader">
+                    <BarLoader
+                      color="#36d7b7"
+                      height={10}
+                      loading
+                      width={500}
+                    />
+                  </div>
+                )}
 
                 <div className="text-left">
                   <h3>Min. System Requirements</h3>
