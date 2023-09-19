@@ -25,8 +25,6 @@ const MainNav = ({ args }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-
-  
   return (
     <div className="MainNavDiv px-0 px-md-auto">
       <Navbar className="container" expand="lg" {...args}>

@@ -11,6 +11,7 @@ import { BarLoader, BounceLoader } from "react-spinners";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReadMoreReact from "read-more-react";
 import Typewriter from "typewriter-effect";
+import Logo from "../images/logo.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,12 +20,9 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import "./Swiper.css";
 const Details = () => {
-
   const [titledataAll, setTitledataAll] = useState([]);
 
   const { id } = useParams();
-
-
 
   const optionss = {
     method: "GET",
@@ -65,7 +63,7 @@ const Details = () => {
   // console.log("titled dataAll",titledataAll.minimum_system_requirements)
   return (
     <div className="MainDetailsSecEver1">
-      <MainNav />
+      <MainNav Logo={Logo} />
       <div className="MainDetailsSecEver">
         <div>
           {/* <h1 className='alert alert-danger'>
