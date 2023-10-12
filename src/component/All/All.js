@@ -77,7 +77,7 @@ const All = () => {
         })}
 
         {/* Pagination controls */}
-        <div>
+        <div style={{ textAlign: "center" }}>
           <button className="PrevBut" onClick={prevPage}>
             {"<"} Previous
           </button>
