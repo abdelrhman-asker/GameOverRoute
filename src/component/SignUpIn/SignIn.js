@@ -124,6 +124,8 @@ const SignIn = ({ currentUser }) => {
             <div className="col-12 inputanderror">
               <div>
                 <input
+                  style={{ background: "#d9d9d9" }}
+                  disabled
                   onChange={getUserData}
                   type="email"
                   name="email"
@@ -132,7 +134,10 @@ const SignIn = ({ currentUser }) => {
               </div>
               <div>
                 {errorList[0] && errorList[0].context.key === "email" ? (
-                  <h4 className="alert alert-danger ">
+                  <h4
+                    className="alert alert-danger "
+                    style={{ marginBottom: 0 }}
+                  >
                     {errorList[0].message}{" "}
                   </h4>
                 ) : (
@@ -144,6 +149,8 @@ const SignIn = ({ currentUser }) => {
             <div className="col-12 inputanderror">
               <div>
                 <input
+                  style={{ background: "#d9d9d9" }}
+                  disabled
                   onChange={getUserData}
                   type="password"
                   name="password"

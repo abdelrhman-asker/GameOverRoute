@@ -19,12 +19,14 @@ const Home = ({ data }) => {
   return (
     <div>
       <HomeNav />
-
       <div className="col-12 MainFirstHomeSecEver">
         <div className="MainFirstHomeSec col-12">
           {/* {user ? user.first_name === "Abdo" ? <h2 style={{color:"white"}}>hello Asker </h2> :  null :  null} */}
 
           <div>
+            {/*        
+             <a href="https://wa.me/+201280603895/?text=الو"> whatsapp </a> */}
+
             <h3>
               Find & track the best <span> free-to-play </span> games!
             </h3>

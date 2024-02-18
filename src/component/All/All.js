@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { dataAllContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 import { Pagination } from "react-bootstrap";
+import { BounceLoader } from "react-spinners";
 
 const All = () => {
   const { dataAll } = useContext(dataContext);
@@ -36,9 +37,10 @@ const All = () => {
     }
   };
   console.log("currentData", currentData);
+  console.log("currentPage", currentPage);
   console.log("totalPages", totalPages);
+  console.log("prevPage", prevPage);
   console.log("nextPage", nextPage);
-
   return (
     <div>
       <HomeNav />
@@ -59,6 +61,7 @@ const All = () => {
                     className="col-xl-12  col-12"
                     src={dataAll.thumbnail}
                     alt="Thumbnail"
+                    loading="eager"
                   />
                 </div>
                 <div className="py-3 col-12 d-flex text-center justify-content-center align-items-center">
@@ -75,22 +78,31 @@ const All = () => {
             </>
           );
         })}
+        <br />
 
         {/* Pagination controls */}
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", width: 90 + "%" }}>
           <button className="PrevBut" onClick={prevPage}>
             {"<"} Previous
           </button>
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              className={currentPage === index + 1 ? "active" : ""}
-              key={index}
-              onClick={() => goToPage(index + 1)}
-              style={{ margin: "2px" }}
-            >
-              {index + 1}
-            </button>
-          ))}
+          {Array.from({ length: totalPages }, (_, index) =>
+            index - currentPage < 2 && currentPage - index < 4 ? (
+              <button
+                className={currentPage === index + 1 ? "active" : ""}
+                key={index}
+                onClick={() => goToPage(index + 1)}
+                style={{ margin: "2px" }}
+              >
+                {index + 1}
+              </button>
+            ) : (
+              index - currentPage < 4 && (
+                <span className="dot" style={{ margin: "2px" }}>
+                  .
+                </span>
+              )
+            )
+          )}
           <button className="NextBut" onClick={nextPage}>
             Next {">"}
           </button>

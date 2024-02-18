@@ -475,6 +475,11 @@ button.active {
   background-color: rgb(70, 70, 250);
   color: white;
 }
+.dot {
+  background-color: transparent;
+  color: #36d7b7;
+  box-shadow: none;
+}
 @media screen and (min-width: 1px) and (max-width: 991px) {
   .DetailsLeeft {
     width: 100%;

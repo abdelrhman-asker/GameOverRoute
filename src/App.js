@@ -71,141 +71,138 @@ const App = () => {
         <ScrollToTop />
         {/* {loading === false ?<div style={{width:"100vw", height:"100vh", justifyContent:"center", alignItems:"center", display:"flex"}}> <BounceLoader color="#36d7b7" style={{width:"100vw", height:"100vh"}}/> </div>: null} */}
 
-        <Online>
-          <Routes>
-            <Route path="/" element={<SignUp />} />
-            <Route path="*" element={<SignUp />} />
-            <Route
-              path="/SignIn"
-              element={<SignIn currentUser={usertoken} />}
-            />
-            <Route
-              path="/Home"
-              element={
-                <Protect>
-                  <Home data={data} />
-                </Protect>
-              }
-            />
-            {/* Details Page */}
-            <Route
-              path="Details/:id"
-              element={
-                <Protect>
-                  <Details />
-                </Protect>
-              }
-            />
-            {/* All Games page */}
-            <Route
-              path="/All"
-              element={
-                <Protect>
-                  <All />
-                </Protect>
-              }
-            />
-            {/* PlatForms */}
-            <Route
-              path="/Pcplatform"
-              element={
-                <Protect>
-                  <Pcplatform />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Browserplatform"
-              element={
-                <Protect>
-                  <Browserplatform />
-                </Protect>
-              }
-            />
-            {/* Sorted Games */}
-            <Route
-              path="/Alphabetical"
-              element={
-                <Protect>
-                  <Alphab />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Popu"
-              element={
-                <Protect>
-                  <Popu />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Relevance"
-              element={
-                <Protect>
-                  <Rele />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Release"
-              element={
-                <Protect>
-                  <Release />
-                </Protect>
-              }
-            />
-            {/* Categories Games */}
-            <Route
-              path="/Racing"
-              element={
-                <Protect>
-                  <Racing />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Sports"
-              element={
-                <Protect>
-                  <Sports />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Social"
-              element={
-                <Protect>
-                  <Social />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Shooter"
-              element={
-                <Protect>
-                  <Shooter />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Zombie"
-              element={
-                <Protect>
-                  <Zombie />
-                </Protect>
-              }
-            />
-            <Route
-              path="/Openworld"
-              element={
-                <Protect>
-                  <Openworld />
-                </Protect>
-              }
-            />
-          </Routes>
-        </Online>
+        {/* <Online> */}
+        <Routes>
+          <Route path="/" element={<SignUp />} />
+          <Route path="*" element={<SignUp />} />
+          <Route path="/SignIn" element={<SignIn currentUser={usertoken} />} />
+          <Route
+            path="/Home"
+            element={
+              <Protect>
+                <Home data={data} />
+              </Protect>
+            }
+          />
+          {/* Details Page */}
+          <Route
+            path="Details/:id"
+            element={
+              <Protect>
+                <Details />
+              </Protect>
+            }
+          />
+          {/* All Games page */}
+          <Route
+            path="/All"
+            element={
+              <Protect>
+                <All />
+              </Protect>
+            }
+          />
+          {/* PlatForms */}
+          <Route
+            path="/Pcplatform"
+            element={
+              <Protect>
+                <Pcplatform />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Browserplatform"
+            element={
+              <Protect>
+                <Browserplatform />
+              </Protect>
+            }
+          />
+          {/* Sorted Games */}
+          <Route
+            path="/Alphabetical"
+            element={
+              <Protect>
+                <Alphab />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Popu"
+            element={
+              <Protect>
+                <Popu />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Relevance"
+            element={
+              <Protect>
+                <Rele />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Release"
+            element={
+              <Protect>
+                <Release />
+              </Protect>
+            }
+          />
+          {/* Categories Games */}
+          <Route
+            path="/Racing"
+            element={
+              <Protect>
+                <Racing />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Sports"
+            element={
+              <Protect>
+                <Sports />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Social"
+            element={
+              <Protect>
+                <Social />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Shooter"
+            element={
+              <Protect>
+                <Shooter />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Zombie"
+            element={
+              <Protect>
+                <Zombie />
+              </Protect>
+            }
+          />
+          <Route
+            path="/Openworld"
+            element={
+              <Protect>
+                <Openworld />
+              </Protect>
+            }
+          />
+        </Routes>
+        {/* </Online> */}
       </HashRouter>
     </div>
   );

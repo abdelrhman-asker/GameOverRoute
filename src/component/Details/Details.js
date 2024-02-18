@@ -42,14 +42,17 @@ const Details = () => {
       });
   }, []);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
+  const loader = setTimeout(() => {
+    setLoading(false);
+  }, 2000);
 
   // console.log("titled dataAll133", titledataAll)
   // console.log("titled dataAll1", titledataAll)
@@ -83,6 +86,8 @@ const Details = () => {
                     className="col-12"
                     alt="thumbnail"
                     src={titledataAll["thumbnail"]}
+                    loading="eager"
+                    onLoad={loader}
                   />
                 </div>
                 <div className="DetailsLeftBut col-12">
