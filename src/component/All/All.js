@@ -3,34 +3,33 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { dataAllContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
-import { Pagination } from "react-bootstrap";
-import { BounceLoader } from "react-spinners";
 
 const All = () => {
   const { dataAll } = useContext(dataContext);
-
   console.log("all", dataAll.length % 20);
   console.log("dataAll", dataAll);
 
   const itemsPerPage = 24;
+  const totalPages = Math.ceil(dataAll.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
-
   const startIndex = (currentPage - 1) * itemsPerPage;
+  // start index to get the start of the slice
   const endIndex = startIndex + itemsPerPage;
+  // end index to get the start of the slice
   const currentData = dataAll.slice(startIndex, endIndex);
 
-  const totalPages = Math.ceil(dataAll.length / itemsPerPage);
-
+  console.log("currentPage", currentPage);
+  console.log("startIndex", startIndex);
+  console.log("total ", totalPages);
   const goToPage = (page) => {
+    // this (page) means index+1 which i passed from the function call
     setCurrentPage(page);
   };
-
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
-
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -64,7 +63,7 @@ const All = () => {
                     loading="eager"
                   />
                 </div>
-                <div className="py-3 col-12 d-flex text-center justify-content-center align-items-center">
+                <div className="py-3  col-12 d-flex text-center justify-content-center align-items-center">
                   <div className="col">{dataAll.title}</div>
                   <div className="col">
                     <span>FREE</span>
@@ -86,7 +85,9 @@ const All = () => {
             {"<"} Previous
           </button>
           {Array.from({ length: totalPages }, (_, index) =>
-            index - currentPage < 2 && currentPage - index < 4 ? (
+            (index - currentPage < 2 && currentPage - index < 4) ||
+            index === 0 ||
+            index + 1 === 17 ? (
               <button
                 className={currentPage === index + 1 ? "active" : ""}
                 key={index}

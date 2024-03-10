@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./NavFooter.css";
-import Logo from "./images/logo.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineRollback } from "react-icons/ai";
 

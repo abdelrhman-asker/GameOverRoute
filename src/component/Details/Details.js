@@ -30,18 +30,6 @@ const Details = () => {
     },
   };
 
-  useEffect(() => {
-    axios
-      .request(optionss)
-      .then(function (response) {
-        setTitledataAll(response.data);
-        console.log("ttdata", titledataAll);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  }, []);
-
   const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
@@ -60,6 +48,18 @@ const Details = () => {
   const rend = [titledataAll];
   const check = Array.from(rend).map((element) => element.screenshots);
   console.log("check", check);
+
+  useEffect(() => {
+    axios
+      .request(optionss)
+      .then(function (response) {
+        setTitledataAll(response.data);
+        console.log("ttdata", titledataAll);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
   // console.log("titled dataAll",titledataAll.minimum_system_requirements)
   return (
     <div className="MainDetailsSecEver1">
