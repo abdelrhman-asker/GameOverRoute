@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "./NavFooter.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineRollback } from "react-icons/ai";
@@ -14,7 +14,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-import { Link, Navigate, Route, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { dataContext } from "../../context/Store";
 

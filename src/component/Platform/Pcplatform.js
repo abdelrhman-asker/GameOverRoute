@@ -1,8 +1,7 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
-import { datapcContext, dataContext } from "../../context/Store";
+import { dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Pcplatform = () => {
@@ -48,7 +47,11 @@ const Pcplatform = () => {
                 style={{ position: "relative" }}
               >
                 <div className="ImgMainDivForZoom col-xl-10  col-10">
-                  <img className="col-xl-12  col-12" src={datapc.thumbnail} />
+                  <img
+                    className="col-xl-12  col-12"
+                    src={datapc.thumbnail}
+                    alt="thumbnail"
+                  />
                 </div>
                 <div className="py-3 col-12 d-flex text-center justify-content-center align-items-center">
                   <div className="col">{datapc.title}</div>
@@ -72,16 +75,26 @@ const Pcplatform = () => {
         <button className="PrevBut" onClick={prevPage}>
           {"<"} Previous
         </button>
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            className={currentPage === index + 1 ? "active" : ""}
-            key={index}
-            onClick={() => goToPage(index + 1)}
-            style={{ margin: "2px" }}
-          >
-            {index + 1}
-          </button>
-        ))}
+        {Array.from({ length: totalPages }, (_, index) =>
+          (index - currentPage < 2 && currentPage - index < 4) ||
+          index === 0 ||
+          index + 1 === totalPages ? (
+            <button
+              className={currentPage === index + 1 ? "active" : ""}
+              key={index}
+              onClick={() => goToPage(index + 1)}
+              style={{ margin: "2px" }}
+            >
+              {index + 1}
+            </button>
+          ) : (
+            index - currentPage < 4 && (
+              <span className="dot" style={{ margin: "2px" }}>
+                .
+              </span>
+            )
+          )
+        )}
         <button className="NextBut" onClick={nextPage}>
           Next {">"}
         </button>

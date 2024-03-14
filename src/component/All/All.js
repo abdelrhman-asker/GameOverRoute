@@ -38,6 +38,7 @@ const All = () => {
   console.log("currentData", currentData);
   console.log("currentPage", currentPage);
   console.log("totalPages", totalPages);
+  console.log("endIndex", endIndex);
   console.log("prevPage", prevPage);
   console.log("nextPage", nextPage);
   return (
@@ -87,7 +88,7 @@ const All = () => {
           {Array.from({ length: totalPages }, (_, index) =>
             (index - currentPage < 2 && currentPage - index < 4) ||
             index === 0 ||
-            index + 1 === 17 ? (
+            index + 1 === totalPages ? (
               <button
                 className={currentPage === index + 1 ? "active" : ""}
                 key={index}

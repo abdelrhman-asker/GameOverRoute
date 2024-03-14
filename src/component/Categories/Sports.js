@@ -75,16 +75,26 @@ const Sports = () => {
         <button className="PrevBut" onClick={prevPage}>
           {"<"} Previous
         </button>
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            className={currentPage === index + 1 ? "active" : ""}
-            key={index}
-            onClick={() => goToPage(index + 1)}
-            style={{ margin: "2px" }}
-          >
-            {index + 1}
-          </button>
-        ))}
+        {Array.from({ length: totalPages }, (_, index) =>
+          (index - currentPage < 2 && currentPage - index < 4) ||
+          index === 0 ||
+          index + 1 === totalPages ? (
+            <button
+              className={currentPage === index + 1 ? "active" : ""}
+              key={index}
+              onClick={() => goToPage(index + 1)}
+              style={{ margin: "2px" }}
+            >
+              {index + 1}
+            </button>
+          ) : (
+            index - currentPage < 4 && (
+              <span className="dot" style={{ margin: "2px" }}>
+                .
+              </span>
+            )
+          )
+        )}
         <button className="NextBut" onClick={nextPage}>
           Next {">"}
         </button>
