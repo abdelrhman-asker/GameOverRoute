@@ -16,9 +16,14 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import "./Swiper.css";
-import { Helmet } from "react-helmet";
+
 const Details = () => {
   const [titledataAll, setTitledataAll] = useState([]);
+
+  // "React Helmet"
+  document.title !== "undefined"
+    ? (document.title = titledataAll["title"])
+    : (document.title = "Details");
 
   const { id } = useParams();
 

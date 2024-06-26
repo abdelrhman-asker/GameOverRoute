@@ -6,6 +6,7 @@ import { dataopenworldContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Openworld = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
   const { dataopenworld } = useContext(dataContext);
 
   // console.log("all", dataopenworld)

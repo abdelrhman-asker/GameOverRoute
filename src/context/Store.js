@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 
 export const dataContext = createContext();
 
@@ -331,10 +330,6 @@ export default function DataContextProvider(props) {
     localStorage.removeItem("token");
     setUser(null);
   };
-  let [hash, setHash] = useState("GameOver");
-  const newHash = () => {
-    setHash(window.location.hash.slice(2, window.location.hash.length));
-  };
 
   return (
     <div>
@@ -355,7 +350,6 @@ export default function DataContextProvider(props) {
           datasports,
           datazombie,
           LogOut,
-          newHash,
         }}
       >
         {props.children}

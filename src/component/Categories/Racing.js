@@ -6,6 +6,7 @@ import { dataracingContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Racing = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
   const { dataracing } = useContext(dataContext);
 
   // console.log("all", dataracing)

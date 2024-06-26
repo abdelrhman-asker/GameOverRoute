@@ -5,6 +5,8 @@ import { dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Pcplatform = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
+
   const { datapc } = useContext(dataContext);
 
   console.log("Pc", datapc);

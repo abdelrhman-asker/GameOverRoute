@@ -1,11 +1,11 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
-import { datasocialContext, dataContext } from "../../context/Store";
+import { dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Social = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
   const { datasocial } = useContext(dataContext);
 
   // console.log("all", datasocial)

@@ -6,6 +6,8 @@ import { datareleaseContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Release = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
+
   const { datarelease } = useContext(dataContext);
 
   console.log("all", datarelease);

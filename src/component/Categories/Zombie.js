@@ -1,11 +1,11 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
-import { datazombieContext, dataContext } from "../../context/Store";
+import { dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Zombie = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
   const { datazombie } = useContext(dataContext);
 
   // console.log("all", datazombie)
@@ -49,6 +49,7 @@ const Zombie = () => {
               >
                 <div className="ImgMainDivForZoom col-xl-10  col-10">
                   <img
+                    alt="thumbnail"
                     className="col-xl-12  col-12"
                     src={datazombie.thumbnail}
                   />
@@ -83,7 +84,7 @@ const Zombie = () => {
               className={currentPage === index + 1 ? "active" : ""}
               key={index}
               onClick={() => goToPage(index + 1)}
-              style={{ margin: "2px" }}
+              style={{ margin: "0px 2px" }}
             >
               {index + 1}
             </button>

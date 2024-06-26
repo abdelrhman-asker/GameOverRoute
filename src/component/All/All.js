@@ -1,10 +1,10 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { dataAllContext, dataContext } from "../../context/Store";
+import { dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const All = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
   const { dataAll } = useContext(dataContext);
   console.log("all", dataAll.length % 20);
   console.log("dataAll", dataAll);

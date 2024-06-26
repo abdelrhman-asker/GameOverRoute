@@ -1,21 +1,11 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import HomeNav from "./NavFooter/HomeNav";
 import { FaRobot } from "react-icons/fa";
-import { HashLink } from "react-router-hash-link";
-import { dataContext } from "../context/Store";
-import {
-  BrowserRouter,
-  Route,
-  Router,
-  Routes,
-  Link,
-  NavLink,
-} from "react-router-dom";
-import jwtDecode from "jwt-decode";
+import { Link } from "react-router-dom";
 
 const Home = ({ data }) => {
   const [user, setUser] = useState(null);
+  document.title = window.location.hash.slice(2, window.location.hash.length);
   return (
     <div>
       <HomeNav />
@@ -42,7 +32,6 @@ const Home = ({ data }) => {
           </div>
         </div>
       </div>
-
       <div className="MainHomesecSection">
         <div className="PersonlRecMainDiv  ">
           <h4 className="PersonlRecMainH  d-flex justify-content-start align-items-center gap-2">

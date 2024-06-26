@@ -6,6 +6,8 @@ import { datapopContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Popu = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
+
   const { datapop } = useContext(dataContext);
 
   console.log("all", datapop);

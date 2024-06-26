@@ -6,6 +6,8 @@ import { dataalphaContext, dataContext } from "../../context/Store";
 import HomeNav from "../NavFooter/HomeNav";
 
 const Alphab = () => {
+  document.title = window.location.hash.slice(2, window.location.hash.length);
+
   const { dataalpha } = useContext(dataContext);
 
   console.log("all", dataalpha);

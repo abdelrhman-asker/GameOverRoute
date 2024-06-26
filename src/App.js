@@ -35,9 +35,9 @@ import Openworld from "./component/Categories/Openworld";
 import Zombie from "./component/Categories/Zombie";
 import jwtDecode from "jwt-decode";
 import { Helmet } from "react-helmet";
-import { HelmetProvider } from "react-helmet-async";
+
 const App = () => {
-  const { data, newHash } = useContext(dataContext);
+  const { data } = useContext(dataContext);
 
   const [user, setUser] = useState(null);
   const usertoken = () => {
@@ -65,13 +65,8 @@ const App = () => {
   //     },[])
 
   return (
-    <div>
+    <div className="appJs">
       <HashRouter>
-        <Helmet>
-          <title>newHash</title>
-          <meta name="description" content="Description of your page" />
-        </Helmet>
-        ;
         <ScrollToTop />
         {/* {loading === false ?<div style={{width:"100vw", height:"100vh", justifyContent:"center", alignItems:"center", display:"flex"}}> <BounceLoader color="#36d7b7" style={{width:"100vw", height:"100vh"}}/> </div>: null} */}
         {/* <Online> */}
