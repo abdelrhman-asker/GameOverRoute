@@ -80,6 +80,7 @@ const SignIn = ({ currentUser }) => {
       navigate("/Home");
     }
   });
+
   return (
     <div className="SignUpMainDivEver">
       <MainNav />

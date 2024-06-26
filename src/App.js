@@ -34,16 +34,15 @@ import Shooter from "./component/Categories/Shooter";
 import Openworld from "./component/Categories/Openworld";
 import Zombie from "./component/Categories/Zombie";
 import jwtDecode from "jwt-decode";
-import { BarLoader, BounceLoader } from "react-spinners";
+import { Helmet } from "react-helmet";
+import { HelmetProvider } from "react-helmet-async";
 const App = () => {
-  const { data } = useContext(dataContext);
-  const { LogOut } = useContext(dataContext);
+  const { data, newHash } = useContext(dataContext);
 
   const [user, setUser] = useState(null);
   const usertoken = () => {
     const encoded = localStorage.getItem("token");
     const decoded = jwtDecode(encoded);
-    console.log(decoded);
     setUser(decoded);
   };
   const Protect = (props) => {
@@ -68,9 +67,13 @@ const App = () => {
   return (
     <div>
       <HashRouter>
+        <Helmet>
+          <title>newHash</title>
+          <meta name="description" content="Description of your page" />
+        </Helmet>
+        ;
         <ScrollToTop />
         {/* {loading === false ?<div style={{width:"100vw", height:"100vh", justifyContent:"center", alignItems:"center", display:"flex"}}> <BounceLoader color="#36d7b7" style={{width:"100vw", height:"100vh"}}/> </div>: null} */}
-
         {/* <Online> */}
         <Routes>
           <Route path="/" element={<SignUp />} />

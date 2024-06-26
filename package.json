@@ -17,6 +17,8 @@
     "react-bootstrap": "^2.9.0",
     "react-detect-offline": "^2.4.5",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.3",
     "react-router-hash-link": "^2.4.3",
