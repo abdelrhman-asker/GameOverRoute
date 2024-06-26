@@ -21,7 +21,7 @@ const Details = () => {
   const [titledataAll, setTitledataAll] = useState([]);
 
   // "React Helmet"
-  document.title !== "undefined"
+  titledataAll["title"]
     ? (document.title = titledataAll["title"])
     : (document.title = "Details");
 
