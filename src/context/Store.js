@@ -286,7 +286,7 @@ export default function DataContextProvider(props) {
   const optionssports = {
     method: "GET",
     url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
-    params: { category: "social" },
+    params: { category: "sports" },
     headers: {
       "X-RapidAPI-Key": "fe3469bdc5mshc1376ef3df17411p1623cajsn6da2a938a410",
       "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
