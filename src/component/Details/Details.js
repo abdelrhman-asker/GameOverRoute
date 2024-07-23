@@ -110,6 +110,10 @@ const Details = () => {
                     <FiLogIn />
                   </a>
                 </div>
+                <h4 style={{ fontSize: "larger", color: "gray" }}>
+                  <span> Release Date : </span>
+                  {titledataAll.release_date}
+                </h4>
               </div>
 
               <div className="DetailssRight mt-5 my-md-0  col-md-8 col-10 mx-auto ms-md-4">
