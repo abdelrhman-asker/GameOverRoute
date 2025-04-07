@@ -10,7 +10,7 @@ const Popu = () => {
 
   const { datapop } = useContext(dataContext);
 
-  console.log("all", datapop);
+  // console.log("all", datapop);
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

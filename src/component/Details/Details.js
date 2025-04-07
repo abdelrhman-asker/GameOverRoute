@@ -48,25 +48,25 @@ const Details = () => {
     setLoading(false);
   }, 2000);
 
-  // console.log("titled dataAll133", titledataAll)
-  // console.log("titled dataAll1", titledataAll)
-  // console.log("titled dataAll2",  dataAll.id)
+  // // console.log("titled dataAll133", titledataAll)
+  // // console.log("titled dataAll1", titledataAll)
+  // // console.log("titled dataAll2",  dataAll.id)
   const rend = [titledataAll];
   const check = Array.from(rend).map((element) => element.screenshots);
-  console.log("check", check);
+  // console.log("check", check);
 
   useEffect(() => {
     axios
       .request(optionss)
       .then(function (response) {
         setTitledataAll(response.data);
-        console.log("ttdata", titledataAll);
+        // console.log("ttdata", titledataAll);
       })
       .catch(function (error) {
         console.error(error);
       });
   }, []);
-  // console.log("titled dataAll",titledataAll.minimum_system_requirements)
+  // // console.log("titled dataAll",titledataAll.minimum_system_requirements)
   return (
     <div className="MainDetailsSecEver1">
       <HomeNav />
@@ -124,7 +124,6 @@ const Details = () => {
                         strings: titledataAll["title"],
                         delay: 200,
                         autoStart: true,
-
                         loop: false,
                       }}
                     />
@@ -197,41 +196,45 @@ const Details = () => {
                         </div>
                       </SwiperSlide>
 
-                      <SwiperSlide>
-                        <div className="MainSwipesDiv animate__animated animate__backInLeft">
-                          {loading ? (
-                            <BarLoader
-                              className="Barloader"
-                              color="#36d7b7"
-                              height={10}
-                              loading
-                              width={500}
+                      {titledataAll.screenshots.length > 1 && (
+                        <SwiperSlide>
+                          <div className="MainSwipesDiv animate__animated animate__backInLeft">
+                            {loading ? (
+                              <BarLoader
+                                className="Barloader"
+                                color="#36d7b7"
+                                height={10}
+                                loading
+                                width={500}
+                              />
+                            ) : null}
+                            <img
+                              src={titledataAll.screenshots["1"].image}
+                              alt="Not_Found"
                             />
-                          ) : null}
-                          <img
-                            src={titledataAll.screenshots["1"].image}
-                            alt="Not_Found"
-                          />
-                        </div>
-                      </SwiperSlide>
+                          </div>
+                        </SwiperSlide>
+                      )}
 
-                      <SwiperSlide>
-                        <div className="MainSwipesDiv animate__animated animate__backInLeft">
-                          {loading ? (
-                            <BarLoader
-                              className="Barloader"
-                              color="#36d7b7"
-                              height={10}
-                              loading
-                              width={500}
+                      {titledataAll.screenshots.length > 2 && (
+                        <SwiperSlide>
+                          <div className="MainSwipesDiv animate__animated animate__backInLeft">
+                            {loading ? (
+                              <BarLoader
+                                className="Barloader"
+                                color="#36d7b7"
+                                height={10}
+                                loading
+                                width={500}
+                              />
+                            ) : null}
+                            <img
+                              src={titledataAll.screenshots["2"].image}
+                              alt="Not_Found"
                             />
-                          ) : null}
-                          <img
-                            src={titledataAll.screenshots["2"].image}
-                            alt="Not_Found"
-                          />
-                        </div>
-                      </SwiperSlide>
+                          </div>
+                        </SwiperSlide>
+                      )}
                     </Swiper>
                   </div>
                 ) : (
@@ -282,7 +285,7 @@ const Details = () => {
             </div>
           )}
 
-          {/* {  console.log("my dataAll" ,dataAll.id)
+          {/* {  // console.log("my dataAll" ,dataAll.id)
 } */}
         </div>
       </div>

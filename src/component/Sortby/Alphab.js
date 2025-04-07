@@ -10,7 +10,7 @@ const Alphab = () => {
 
   const { dataalpha } = useContext(dataContext);
 
-  console.log("all", dataalpha);
+  // console.log("all", dataalpha);
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

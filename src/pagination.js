@@ -3,7 +3,6 @@ import { dataContext } from "./context/Store";
 import { Pagination } from "react-bootstrap";
 
 function PaginatedList({ itemsPerPage }) {
-  const { dataAll } = useContext(dataContext);
   const { currentPage } = useContext(dataContext);
   const { currentData } = useContext(dataContext);
   const { setCurrentPage } = useContext(dataContext);

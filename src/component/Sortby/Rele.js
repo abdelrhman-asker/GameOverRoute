@@ -10,7 +10,7 @@ const Rele = () => {
 
   const { datarele } = useContext(dataContext);
 
-  console.log("all", datarele);
+  // console.log("all", datarele);
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

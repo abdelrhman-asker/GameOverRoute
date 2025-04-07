@@ -15,7 +15,7 @@ const SignUp = () => {
   const data = localStorage.getItem("token");
 
   useEffect(() => {
-    console.log("its data token", data);
+    // console.log("its data token", data);
     if (data) {
       navigate("/Home");
     }
@@ -36,21 +36,21 @@ const SignUp = () => {
     const myUser = { ...user };
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
-    console.log(myUser);
-    // console.log(e.target.value)
+    // console.log(myUser);
+    // // console.log(e.target.value)
   };
   // const url= "https://route-egypt-api.herokuapp.com/signup"
   // const url = "https://sticky-note-fe.vercel.app/signup";
   const url = "https://www.facebook.com/v18.0/dialog/oauth?";
   const SendRegisteredDataApi = async () => {
     let { data } = await axios.post(url, user);
-    console.log("my data is", data);
+    // console.log("my data is", data);
     submitregisterform();
 
     if (data.message === "success") {
       setLoading(true);
       navigate("./SignIn");
-      console.log("my data is", data.massage);
+      // console.log("my data is", data.massage);
     } else {
       setError(data.message);
       setLoading(false);
@@ -58,15 +58,15 @@ const SignUp = () => {
   };
   const submitregisterform = async (e) => {
     const validate = validateRegister();
-    console.log("my validate is", validate);
-    // console.log("my validate is 2", user.first_name.error)
+    // console.log("my validate is", validate);
+    // // console.log("my validate is 2", user.first_name.error)
     e.preventDefault();
 
     if (await validate.error) {
       setErrorList(validate.error.details);
       setLoading(false);
 
-      // console.log("firstnameerr",errs.message)
+      // // console.log("firstnameerr",errs.message)
     } else {
       setLoading(true);
       SendRegisteredDataApi();
@@ -267,10 +267,10 @@ const SignUp = () => {
                 navigate("/home");
                 localStorage.setItem("token", provider.data.access_token);
                 localStorage.setItem("AllData", JSON.stringify(provider.data));
-                console.log("tok", provider.data.access_token);
+                // console.log("tok", provider.data.access_token);
               }}
               onReject={(error) => {
-                console.log(error);
+                // console.log(error);
               }}
             >
               <GoogleLoginButton
@@ -280,12 +280,20 @@ const SignUp = () => {
             </LoginSocialGoogle>
             <h4>
               This site is protected by reCAPTCHA and the Google{" "}
-              <a target="_blank" href="https://policies.google.com/privacy">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://policies.google.com/privacy"
+              >
                 {" "}
                 Privacy Policy{" "}
               </a>{" "}
               and{" "}
-              <a target="_blank" href="https://policies.google.com/terms">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://policies.google.com/terms"
+              >
                 {" "}
                 Terms of Service{" "}
               </a>{" "}

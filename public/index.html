@@ -21,6 +21,7 @@
   ></script> -->
     <title>Game Over</title>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -34,5 +35,20 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://api.anychat.one/widget/3bf39e81-7cc8-35fa-97b3-f2ac7ce591d3?r=" +
+          encodeURIComponent(window.location);
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "contactus-jssdk");
+    </script>
   </body>
 </html>

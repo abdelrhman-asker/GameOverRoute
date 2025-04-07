@@ -8,7 +8,7 @@ const Social = () => {
   document.title = window.location.hash.slice(2, window.location.hash.length);
   const { datasocial } = useContext(dataContext);
 
-  // console.log("all", datasocial)
+  // // console.log("all", datasocial)
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 
