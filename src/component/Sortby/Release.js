@@ -10,7 +10,7 @@ const Release = () => {
 
   const { datarelease } = useContext(dataContext);
 
-  console.log("all", datarelease);
+  // console.log("all", datarelease);
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

@@ -9,7 +9,7 @@ const Pcplatform = () => {
 
   const { datapc } = useContext(dataContext);
 
-  console.log("Pc", datapc);
+  // console.log("Pc", datapc);
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -59,7 +59,7 @@ const Pcplatform = () => {
                   <div className="col">{datapc.title}</div>
                   <div className="col">
                     <span>FREE</span>
-                    {/* { console.log("my idt" ,idt)} */}
+                    {/* { // console.log("my idt" ,idt)} */}
                   </div>
                 </div>
 

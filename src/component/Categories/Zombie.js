@@ -8,7 +8,7 @@ const Zombie = () => {
   document.title = window.location.hash.slice(2, window.location.hash.length);
   const { datazombie } = useContext(dataContext);
 
-  // console.log("all", datazombie)
+  // // console.log("all", datazombie)
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

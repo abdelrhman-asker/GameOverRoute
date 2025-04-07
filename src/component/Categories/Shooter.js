@@ -8,7 +8,7 @@ const Shooter = () => {
   document.title = window.location.hash.slice(2, window.location.hash.length);
   const { datashooter } = useContext(dataContext);
 
-  // console.log("all", datashooter)
+  // // console.log("all", datashooter)
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

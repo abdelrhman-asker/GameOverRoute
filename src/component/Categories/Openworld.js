@@ -9,7 +9,7 @@ const Openworld = () => {
   document.title = window.location.hash.slice(2, window.location.hash.length);
   const { dataopenworld } = useContext(dataContext);
 
-  // console.log("all", dataopenworld)
+  // // console.log("all", dataopenworld)
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

@@ -9,7 +9,7 @@ const Browserplatform = () => {
 
   const { databrowser } = useContext(dataContext);
 
-  console.log("browser", databrowser);
+  // console.log("browser", databrowser);
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -59,7 +59,7 @@ const Browserplatform = () => {
                   <div className="col">{databrowser.title}</div>
                   <div className="col">
                     <span>FREE</span>
-                    {/* { console.log("my idt" ,idt)} */}
+                    {/* { // console.log("my idt" ,idt)} */}
                   </div>
                 </div>
 

@@ -445,12 +445,15 @@ body {
   height: 100vh;
 }
 .MainAllDiv {
-  padding-top: 15vh;
+  padding-top: 20vh;
   background-color: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.BarLoader2 {
+  width: 25% !important;
 }
 .read-more-button {
   color: #36d7b7;
@@ -539,4 +542,144 @@ button.active {
 .css-wjh20t-MuiPagination-ul {
   display: flex;
   justify-content: center;
+}
+.MoreDetailsSection {
+  position: fixed;
+  min-width: 40vw;
+  padding: 20vh 2%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(56, 73, 89);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  
+}
+.MoreDetailsSectionOff {
+  transform: translateX(0vw);
+  transition: 2s;
+}
+.MoreDetailsSection h1 {
+  color: #e4e4e4;
+  padding: 10px 0;
+  border-bottom: 5px solid #4799eb;
+}
+.MoreDetailsSection h2 {
+  position: absolute;
+  top: 15vh;
+  left: 4%;
+  cursor: pointer;
+}
+.MoreDetailsSection img {
+  border-radius: 20px;
+  max-width: 100%;
+}
+.DetailsData {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2vh;
+}
+.DetailsData h4 {
+  font-size: 18px;
+  color: #007dfb;
+}
+.DetailsData h4 span {
+  position: relative;
+  color: #9ac7f34f;
+}
+.DetailsData h4 span::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #4799eb;
+  left: 0;
+  bottom: -20%;
+}
+.DetailsData h4:hover ::before {
+  width: 100%;
+  transition: 0.5s;
+}
+.ClosingMoreDet {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60vw;
+  z-index: 5;
+  background-color: transparent;
+}
+.MainMapDivEver {
+  position: relative;
+}
+.ShowQ {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 8px black;
+  color: rgb(0, 111, 113);
+  background-color: rgb(255, 255, 255);
+}
+.ShowQ:hover {
+  box-shadow: 4px 4px 8px black;
+  transition: 0.4s;
+}
+.SearchInpuOn {
+  border-radius: 15px;
+  min-height: 50px;
+  /* min-width: 30vw; */
+  padding: 0px 15px;
+  background-color: black;
+  color: rgb(158, 158, 158);
+  border: none;
+  transition: width 2s;
+}
+.SearchInpuOff {
+  transition: 0.2s;
+}
+.SearchInpuOff {
+  /* width: 0vw !important; */
+  background-color: transparent;
+  border: 0;
+}
+
+.SearchResult {
+  width: 70vw;
+  margin: 3vh auto 0;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: black;
+  color: rgb(184, 184, 184);
+  position: relative;
+}
+.SearchResult span {
+  color: rgb(108, 108, 108);
+}
+.SearchResult a {
+  color: rgb(45, 45, 157);
+  position: relative;
+  width: fit-content;
+}
+.Closing {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+.SearchSpan {
+  font-size: 32px;
+  color: gray;
+}
+iframe {
+  min-height: 70vh;
 }

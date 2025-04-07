@@ -24,8 +24,8 @@ const SignIn = ({ currentUser }) => {
     const myUser = { ...user };
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
-    // console.log(myUser)
-    // console.log(e.target.value)
+    // // console.log(myUser)
+    // // console.log(e.target.value)
   };
   // const url = "https://route-egypt-api.herokuapp.com/signin";
   const url = "https://sticky-note-fe.vercel.app/signin";
@@ -48,7 +48,7 @@ const SignIn = ({ currentUser }) => {
   const submitLoginform = (e) => {
     e.preventDefault();
     const validate = validateLogin();
-    // console.log(validate)
+    // // console.log(validate)
 
     if (validate.error) {
       setLoading(false);
@@ -75,7 +75,7 @@ const SignIn = ({ currentUser }) => {
   const data = localStorage.getItem("token");
 
   useEffect(() => {
-    console.log("its data token", data);
+    // console.log("its data token", data);
     if (data) {
       navigate("/Home");
     }
@@ -84,6 +84,7 @@ const SignIn = ({ currentUser }) => {
   return (
     <div className="SignUpMainDivEver">
       <MainNav />
+
       <div className="  SignINMainDataDiv ">
         <div className="col-lg-7 mainIMageDivSign ">
           <img
@@ -180,10 +181,10 @@ const SignIn = ({ currentUser }) => {
                 navigate("/home");
                 localStorage.setItem("token", provider.data.access_token);
                 localStorage.setItem("AllData", JSON.stringify(provider.data));
-                console.log("tok", provider.data.access_token);
+                // console.log("tok", provider.data.access_token);
               }}
               onReject={(error) => {
-                console.log(error);
+                // console.log(error);
               }}
             >
               <GoogleLoginButton

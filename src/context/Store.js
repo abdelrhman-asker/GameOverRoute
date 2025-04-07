@@ -19,13 +19,14 @@ export default function DataContextProvider(props) {
       .request(options)
       .then(function (response) {
         setData(response.data);
-        // console.log("onstore", response)
+        // // console.log("onstore", response)
       })
       .catch(function (error) {
         console.error(error);
       });
   }, []);
 
+  const [loading, setLoading] = useState(false);
   const [dataAll, setdataAll] = useState([]);
   const optionsAll = {
     method: "GET",
@@ -35,17 +36,25 @@ export default function DataContextProvider(props) {
       "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
     },
   };
-  useEffect(() => {
-    axios
-      .request(optionsAll)
-      .then(function (response) {
-        setdataAll(response.data);
-        // console.log("onstore", response)
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+  useEffect(function () {
+    async function fetchdata() {
+      setLoading(true);
+      // console.log("loading1 ", loading);
+      await axios
+        .request(optionsAll)
+        .then(function (response) {
+          setdataAll(response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      setLoading(false);
+      // console.log("loading2 ", loading);
+    }
+    fetchdata();
   }, []);
+
+  // console.log("onstore", dataAll);
 
   // Platform
   //  ||
@@ -67,7 +76,7 @@ export default function DataContextProvider(props) {
       .request(optionsPc)
       .then(function (response) {
         setdataPc(response.data);
-        // console.log("onstore", response)
+        // // console.log("onstore", response)
       })
       .catch(function (error) {
         console.error(error);
@@ -90,7 +99,7 @@ export default function DataContextProvider(props) {
       .request(optionsBrowser)
       .then(function (response) {
         setdataBrowser(response.data);
-        // console.log("onstore", response)
+        // // console.log("onstore", response)
       })
       .catch(function (error) {
         console.error(error);
@@ -330,7 +339,10 @@ export default function DataContextProvider(props) {
     localStorage.removeItem("token");
     setUser(null);
   };
-
+  const [moreDetails, setMoreDetails] = useState(false);
+  const handleOnClick = (index) => {
+    setMoreDetails(index);
+  };
   return (
     <div>
       <dataContext.Provider
@@ -350,6 +362,10 @@ export default function DataContextProvider(props) {
           datasports,
           datazombie,
           LogOut,
+          loading,
+          handleOnClick,
+          moreDetails,
+          setMoreDetails,
         }}
       >
         {props.children}

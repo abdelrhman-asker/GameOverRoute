@@ -9,7 +9,7 @@ const Racing = () => {
   document.title = window.location.hash.slice(2, window.location.hash.length);
   const { dataracing } = useContext(dataContext);
 
-  // console.log("all", dataracing)
+  // // console.log("all", dataracing)
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 

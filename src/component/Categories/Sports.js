@@ -8,7 +8,7 @@ const Sports = () => {
   document.title = window.location.hash.slice(2, window.location.hash.length);
   const { datasports } = useContext(dataContext);
 
-  // console.log("all", datasports)
+  // // console.log("all", datasports)
   const itemsPerPage = 24;
   const [currentPage, setCurrentPage] = useState(1);
 
