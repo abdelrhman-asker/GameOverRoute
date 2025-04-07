@@ -6,6 +6,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.10.5",
     "@faker-js/faker": "^8.4.1",
+    "@hotjar/browser": "^1.0.9",
     "@mui/material": "^5.11.0",
     "@react-icons/all-files": "^4.1.0",
     "@table-library/react-table-library": "^4.1.7",
