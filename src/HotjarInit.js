@@ -8,9 +8,20 @@ const hotjarVersion = 6;
 
 export default function HotjarInit() {
   useEffect(() => {
-    // Removed isProduction check for local testing
-    Hotjar.init(siteId, hotjarVersion);
-  }, []);
+    try {
+      // Initialize Hotjar
+      const initialized = Hotjar.init(siteId, hotjarVersion);
+      
+      // Optional: Verify initialization
+      if (initialized) {
+        console.log("Hotjar initialized successfully");
+      } else {
+        console.log("Hotjar already initialized or initialization failed");
+      }
+    } catch (error) {
+      console.error("Hotjar initialization error:", error);
+    }
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return null;
 }
