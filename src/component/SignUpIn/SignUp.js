@@ -263,14 +263,15 @@ const SignUp = () => {
             <LoginSocialGoogle
               autoLoad={true}
               client_id={clientId}
+              isOnlyGetToken={true}
               onResolve={(provider) => {
-                navigate("/home");
                 localStorage.setItem("token", provider.data.access_token);
                 localStorage.setItem("AllData", JSON.stringify(provider.data));
+                navigate("/home");
                 // console.log("tok", provider.data.access_token);
               }}
-              onReject={(error) => {
-                // console.log(error);
+              onReject={() => {
+                setError("Google login failed. Please try again.");
               }}
             >
               <GoogleLoginButton
