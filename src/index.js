@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import DataContextProvider from "./context/Store";
-import BasicTable from "./BasicTable";
 // import Asker from "./Asker";
 import HotjarInit from "./HotjarInit";
 
